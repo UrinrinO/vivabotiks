@@ -12,11 +12,7 @@ export function AnimatedCounter({ value, suffix = "" }: AnimatedCounterProps) {
   const [display, setDisplay] = useState(0);
 
   useEffect(() => {
-    if (!inView) return;
-    if (reduce) {
-      setDisplay(value);
-      return;
-    }
+    if (!inView || reduce) return;
     const duration = 1200;
     const start = performance.now();
     let raf: number;
@@ -31,7 +27,7 @@ export function AnimatedCounter({ value, suffix = "" }: AnimatedCounterProps) {
 
   return (
     <span ref={ref}>
-      {display}
+      {reduce ? value : display}
       {suffix}
     </span>
   );
