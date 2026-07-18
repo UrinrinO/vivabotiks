@@ -1,4 +1,4 @@
-export type Service = { number: string; title: string; description: string; href: string };
+export type Service = { number: string; title: string; description: string; href: string; bullets: string[] };
 export type Stat = { value: number; suffix: string; label: string };
 export type ProcessStep = { number: string; title: string; description: string };
 export type Testimonial = { quote: string; name: string; role: string; company: string };
@@ -27,6 +27,7 @@ export const services: Service[] = [
     description:
       "Custom AI assistants, chatbots, and workflow automation that remove repetitive work and let your team move faster.",
     href: "/services",
+    bullets: ["Custom AI assistants", "Workflow automation", "Chatbots & agents"],
   },
   {
     number: "02",
@@ -34,6 +35,7 @@ export const services: Service[] = [
     description:
       "Web and mobile products engineered end to end — design, build, test, launch, and long-term support.",
     href: "/services",
+    bullets: ["Web & mobile apps", "APIs & integrations", "Testing & support"],
   },
   {
     number: "03",
@@ -41,6 +43,7 @@ export const services: Service[] = [
     description:
       "We turn raw data into dashboards and forecasts that power confident business decisions.",
     href: "/services",
+    bullets: ["Dashboards", "Forecasting", "Data pipelines"],
   },
   {
     number: "04",
@@ -48,6 +51,7 @@ export const services: Service[] = [
     description:
       "Detailed 3D visuals and animation that showcase your products in their best possible light.",
     href: "/services",
+    bullets: ["Product visuals", "Animation", "Interactive 3D"],
   },
 ];
 

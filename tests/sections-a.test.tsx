@@ -5,11 +5,12 @@ import { AboutBlock } from "@/components/sections/AboutBlock";
 import { services, about } from "@/content/home";
 
 describe("Services", () => {
-  it("renders all four service cards from content", () => {
+  it("renders all four service cards with titles and first bullets", () => {
     render(<Services />);
     for (const s of services) {
       expect(screen.getByText(s.title)).toBeInTheDocument();
       expect(screen.getByText(s.description)).toBeInTheDocument();
+      expect(screen.getByText(s.bullets[0])).toBeInTheDocument();
     }
   });
 });
