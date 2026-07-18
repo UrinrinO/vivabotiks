@@ -12,7 +12,7 @@ export default function ContactPage() {
     <main>
       <PageHero title={page.title} breadcrumb={page.breadcrumb} />
       <div className="mx-auto max-w-6xl px-6 py-24">
-        <p className="max-w-xl text-lg leading-relaxed text-mist">{page.message}</p>
+        <p className="max-w-xl text-lg leading-relaxed text-ink-soft">{page.message}</p>
         <Button href={stubBackHome.href} variant="ghost" className="mt-10">
           {stubBackHome.label}
         </Button>
