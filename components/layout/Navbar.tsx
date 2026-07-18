@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
-import { Menu, Sparkles, X } from "lucide-react";
+import { Menu, Star, X } from "lucide-react";
 import { navCta, navLinks, siteMeta } from "@/content/site";
 import { cn } from "@/lib/cn";
 
@@ -29,11 +29,11 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        scrolled ? "border-b border-foam/10 bg-navy/95 backdrop-blur" : "bg-transparent",
+        scrolled ? "border-b border-border bg-bg/90 backdrop-blur" : "bg-transparent",
       )}
     >
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="font-heading text-xl font-bold tracking-tight text-foam">
+        <Link href="/" className="font-heading text-xl font-bold tracking-tight text-ink">
           {siteMeta.name}
         </Link>
 
@@ -42,7 +42,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-heading text-sm font-medium text-foam/80 transition-colors hover:text-accent"
+              className="font-heading text-sm font-medium text-ink-soft transition-colors hover:text-accent"
             >
               {link.label}
             </Link>
@@ -52,16 +52,16 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href={navCta.href}
-            className="hidden items-center gap-2 rounded-full bg-accent px-5 py-2.5 font-heading text-sm font-medium text-navy-deep transition-colors hover:bg-accent-strong sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full bg-ink px-5 py-2.5 font-heading text-sm font-medium text-white transition-colors hover:bg-ink/90 sm:inline-flex"
           >
-            <Sparkles aria-hidden className="size-4" />
+            <Star aria-hidden className="size-4 fill-accent-bright text-accent-bright" />
             {navCta.label}
           </Link>
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((o) => !o)}
-            className="rounded-full border border-foam/20 p-2.5 text-foam lg:hidden"
+            className="rounded-full border border-border p-2.5 text-ink lg:hidden"
           >
             {open ? <X aria-hidden className="size-5" /> : <Menu aria-hidden className="size-5" />}
           </button>
@@ -75,7 +75,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 top-18 z-40 flex flex-col gap-2 bg-navy-deep px-6 py-10 lg:hidden"
+            className="fixed inset-0 top-18 z-40 flex flex-col gap-2 bg-bg px-6 py-10 lg:hidden"
           >
             {navLinks.map((link, i) => (
               <motion.div
@@ -87,7 +87,7 @@ export function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3 font-heading text-2xl font-semibold text-foam hover:text-accent"
+                  className="block py-3 font-heading text-2xl font-semibold text-ink hover:text-accent"
                 >
                   {link.label}
                 </Link>
@@ -96,9 +96,9 @@ export function Navbar() {
             <Link
               href={navCta.href}
               onClick={() => setOpen(false)}
-              className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-accent px-6 py-3 font-heading text-sm font-medium text-navy-deep"
+              className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-ink px-6 py-3 font-heading text-sm font-medium text-white"
             >
-              <Sparkles aria-hidden className="size-4" />
+              <Star aria-hidden className="size-4 fill-accent-bright text-accent-bright" />
               {navCta.label}
             </Link>
           </motion.nav>
