@@ -33,6 +33,7 @@ export const footerContent = {
     phone: "+234 000 000 0000",
     location: "Lagos, Nigeria",
   },
+  hours: "Mon–Fri, 9am–6pm WAT", // PLACEHOLDER
   // PLACEHOLDER socials — replace hrefs with real profiles before launch
   socials: [
     { label: "X", href: "#" },

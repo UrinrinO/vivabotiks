@@ -1,0 +1,153 @@
+export type Partner = { name: string; initials: string };
+export type CaseStudy = { tag: string; title: string; result: string };
+export type FounderQuote = { quote: string; name: string; role: string };
+export type Award = { number: string; title: string; issuer: string; year: string };
+export type WhyItem = { number: string; title: string; description: string };
+export type PricingTier = {
+  name: string;
+  monthly: number;
+  annual: number;
+  blurb: string;
+  features: string[];
+  popular?: boolean;
+  cta: { label: string; href: string };
+};
+export type Post = { date: string; category: string; title: string; excerpt: string };
+export type Intro = { eyebrow?: string; title: string; description?: string };
+
+export const logosIntro: Intro = {
+  title: "Trusted by teams building across industries",
+};
+
+// PLACEHOLDER partners — replace with real client names/logos before launch.
+export const partners: Partner[] = [
+  { name: "Northwind", initials: "NW" },
+  { name: "Kola Foods", initials: "KF" },
+  { name: "Lumen Health", initials: "LH" },
+  { name: "Paystack-like", initials: "PS" },
+  { name: "Savanna Bank", initials: "SB" },
+  { name: "Orbit Logistics", initials: "OL" },
+];
+
+export const caseStudiesIntro: Intro = {
+  eyebrow: "Selected work",
+  title: "Products we've shipped",
+  description: "A snapshot of the outcomes we build for. Full case studies are on the way.",
+};
+
+// PLACEHOLDER case studies — replace with real projects before launch.
+export const caseStudies: CaseStudy[] = [
+  {
+    tag: "Automation",
+    title: "Support triage assistant",
+    result: "Cut first-response time by an estimated 60% with an AI triage layer.",
+  },
+  {
+    tag: "Analytics",
+    title: "Revenue forecasting dashboard",
+    result: "Unified five data sources into one live forecast for the leadership team.",
+  },
+  {
+    tag: "Product",
+    title: "Field-ops mobile app",
+    result: "Shipped an offline-first app used daily by distributed field teams.",
+  },
+];
+
+// PLACEHOLDER founder quote — replace with a real founder statement before launch.
+export const founderQuote: FounderQuote = {
+  quote:
+    "We started Vivabotiks to make serious software feel within reach — pairing senior engineering with AI so smaller teams can ship like big ones.",
+  name: "Founder Name",
+  role: "Founder & CEO, Vivabotiks",
+};
+
+export const awardsIntro: Intro = {
+  eyebrow: "Recognition",
+  title: "Where our work gets noticed",
+};
+
+// PLACEHOLDER awards — replace with real recognitions before launch.
+export const awards: Award[] = [
+  { number: "//01", title: "Top Software Partner", issuer: "Placeholder Awards", year: "2025" },
+  { number: "//02", title: "AI Innovation Finalist", issuer: "Placeholder Summit", year: "2025" },
+  { number: "//03", title: "Best Product Design", issuer: "Placeholder Guild", year: "2024" },
+  { number: "//04", title: "Rising Studio", issuer: "Placeholder Review", year: "2024" },
+];
+
+export const whyUsIntro: Intro = {
+  eyebrow: "Why Vivabotiks",
+  title: "What working with us feels like",
+  description: "Senior-led delivery, AI where it earns its place, and no hand-offs to junior teams.",
+};
+
+export const whyUs: WhyItem[] = [
+  { number: "01", title: "Senior-led teams", description: "You work directly with experienced engineers and designers, start to finish." },
+  { number: "02", title: "AI where it counts", description: "We add intelligence where it creates real leverage — not as a gimmick." },
+  { number: "03", title: "End-to-end delivery", description: "From first idea to launch and maintenance, one accountable team owns it." },
+  { number: "04", title: "Clear communication", description: "Plain-language updates and a plan you can actually follow." },
+  { number: "05", title: "Built to last", description: "Well-tested, documented codebases you or we can maintain for years." },
+  { number: "06", title: "Outcome focused", description: "We measure success by what your business can do after we ship." },
+];
+
+export const pricingIntro: Intro = {
+  eyebrow: "Engagements",
+  title: "Ways to work with us",
+  description: "Indicative engagement tiers. Final scope and pricing are shaped in a free discovery call.",
+};
+
+// PLACEHOLDER pricing — indicative only; confirm real numbers/features before launch.
+export const pricing: PricingTier[] = [
+  {
+    name: "Starter",
+    monthly: 1500,
+    annual: 1200,
+    blurb: "A focused build or automation to prove value fast.",
+    features: ["One clear objective", "Senior engineer + designer", "2–4 week delivery", "Post-launch handover"],
+    cta: { label: "Start here", href: "/contact" },
+  },
+  {
+    name: "Growth",
+    monthly: 3500,
+    annual: 2800,
+    blurb: "A full product or platform, built end to end.",
+    features: ["Dedicated delivery team", "AI & automation included", "Ongoing iteration", "Analytics & dashboards", "Priority support"],
+    popular: true,
+    cta: { label: "Book a call", href: "/contact" },
+  },
+  {
+    name: "Pro",
+    monthly: 6000,
+    annual: 4800,
+    blurb: "An ongoing partnership for ambitious roadmaps.",
+    features: ["Multi-team delivery", "Dedicated architect", "Roadmap planning", "SLA & maintenance", "Quarterly strategy reviews"],
+    cta: { label: "Talk to us", href: "/contact" },
+  },
+];
+
+export const blogIntro: Intro = {
+  eyebrow: "Insights",
+  title: "From the Vivabotiks team",
+};
+
+// PLACEHOLDER posts — replace with real articles before launch.
+export const posts: Post[] = [
+  {
+    date: "Coming soon",
+    category: "AI",
+    title: "Where AI actually pays off for small teams",
+    excerpt: "A practical look at the automations worth building first.",
+  },
+  {
+    date: "Coming soon",
+    category: "Engineering",
+    title: "Shipping software that survives its second year",
+    excerpt: "How we design codebases for long-term maintenance.",
+  },
+  {
+    date: "Coming soon",
+    category: "Design",
+    title: "Designing dashboards people actually use",
+    excerpt: "Turning raw data into decisions, not just charts.",
+  },
+];
