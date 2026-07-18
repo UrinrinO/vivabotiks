@@ -1,53 +1,47 @@
 import { hero } from "@/content/home";
 import { Button } from "@/components/ui/Button";
+import { Tag } from "@/components/ui/Tag";
 
 export function Hero() {
-  const tickerItems = [...hero.ticker, ...hero.ticker]; // duplicated for seamless loop
-
   return (
-    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gradient-to-b from-navy via-navy to-navy-deep pt-24">
-      {/* Glow accents */}
+    <section className="relative overflow-hidden bg-gradient-to-b from-surface to-bg pt-32 pb-20">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 right-[-10%] size-[36rem] rounded-full bg-accent/15 blur-3xl [animation:glow-drift_14s_ease-in-out_infinite]"
+        className="pointer-events-none absolute -top-24 right-[-10%] size-[34rem] rounded-full bg-accent-bright/15 blur-3xl [animation:glow-drift_16s_ease-in-out_infinite]"
       />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute bottom-0 left-[-15%] size-[28rem] rounded-full bg-navy-soft/60 blur-3xl"
-      />
-
-      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-[3fr_2fr]">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[3fr_2fr]">
         <div>
-          <h1 className="font-heading text-4xl font-bold leading-tight text-foam sm:text-5xl lg:text-6xl">
+          <Tag>AI-powered software company</Tag>
+          <h1 className="mt-5 font-heading text-4xl font-semibold leading-[1.1] text-ink sm:text-5xl lg:text-6xl">
             {hero.headline}
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-mist">{hero.subline}</p>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">{hero.subline}</p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href={hero.primaryCta.href}>{hero.primaryCta.label}</Button>
+            <Button href={hero.primaryCta.href} star>
+              {hero.primaryCta.label}
+            </Button>
             <Button href={hero.secondaryCta.href} variant="ghost">
               {hero.secondaryCta.label}
             </Button>
           </div>
         </div>
 
-        {/* Abstract AI orb — pure CSS, no stock imagery */}
-        <div aria-hidden className="relative mx-auto hidden size-72 lg:block">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-accent/30 via-navy-soft to-transparent blur-xl [animation:glow-drift_10s_ease-in-out_infinite]" />
-          <div className="absolute inset-6 rounded-full border border-accent/30" />
-          <div className="absolute inset-14 rounded-full border border-foam/15" />
-          <div className="absolute inset-24 rounded-full bg-accent/80 blur-sm" />
-        </div>
-      </div>
-
-      {/* Capability ticker */}
-      <div className="relative mt-20 border-y border-foam/10 bg-navy-deep/60 py-4" aria-hidden>
-        <div className="flex w-max gap-12 [animation:ticker_28s_linear_infinite]">
-          {tickerItems.map((item, i) => (
-            <span key={`${item}-${i}`} className="flex items-center gap-12 whitespace-nowrap font-heading text-sm uppercase tracking-[0.25em] text-foam/60">
-              {item}
-              <span className="text-accent">·</span>
-            </span>
-          ))}
+        {/* Abstract dashboard mock — pure CSS, no imagery */}
+        <div aria-hidden className="relative mx-auto hidden h-80 w-full max-w-sm lg:block">
+          <div className="absolute inset-0 rounded-3xl border border-border bg-surface shadow-sm" />
+          <div className="absolute left-6 top-6 right-6 flex items-center gap-2">
+            <span className="size-3 rounded-full bg-accent-bright" />
+            <span className="size-3 rounded-full bg-ink/15" />
+            <span className="size-3 rounded-full bg-ink/15" />
+          </div>
+          <div className="absolute left-6 right-6 top-16 h-24 rounded-2xl bg-gradient-to-tr from-accent/20 via-surface-2 to-bg" />
+          <div className="absolute left-6 top-44 h-3 w-40 rounded-full bg-ink/10" />
+          <div className="absolute left-6 top-52 h-3 w-28 rounded-full bg-ink/10" />
+          <div className="absolute bottom-6 left-6 right-6 flex gap-3">
+            <div className="h-16 flex-1 rounded-xl bg-surface-2" />
+            <div className="h-16 flex-1 rounded-xl bg-accent/15" />
+            <div className="h-16 flex-1 rounded-xl bg-surface-2" />
+          </div>
         </div>
       </div>
     </section>
