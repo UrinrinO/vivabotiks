@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #011627;
-  --color-navy-deep: #010e18;
-  --color-navy-soft: #062c47;
-  --color-accent: #22d3ee;
-  --color-accent-strong: #06b6d4;
-  --color-foam: #f1f7fb;
-  --color-mist: #8fa6b8;
-  --font-heading: var(--font-space-grotesk), ui-sans-serif, sans-serif;
+  --color-bg: #ffffff;
+  --color-surface: #f5f9fc;
+  --color-surface-2: #eef4f9;
+  --color-ink: #011627;
+  --color-ink-soft: #4f6373;
+  --color-accent: #0891b2;
+  --color-accent-bright: #22d3ee;
+  --color-border: rgb(1 22 39 / 0.10);
+  --font-heading: var(--font-fraunces), Georgia, serif;
   --font-body: var(--font-inter), ui-sans-serif, sans-serif;
 }
 
@@ -17,7 +18,7 @@ html {
 }
 
 body {
-  @apply bg-navy font-body text-foam antialiased;
+  @apply bg-bg font-body text-ink antialiased;
 }
 
 :focus-visible {
