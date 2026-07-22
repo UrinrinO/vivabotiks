@@ -30,7 +30,7 @@ export function StatsQuote() {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <figure className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur">
+          <figure className="border border-white/10 bg-white/[0.04] p-8 backdrop-blur">
             <blockquote className="font-heading text-xl font-medium leading-snug text-white sm:text-2xl">
               “{founderQuote.quote}”
             </blockquote>

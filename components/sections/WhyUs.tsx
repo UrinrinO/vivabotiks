@@ -18,9 +18,9 @@ export function WhyUs() {
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {whyUs.map((w, i) => (
             <Reveal key={w.number} delay={i * 0.06}>
-              <div className="flex h-full flex-col rounded-2xl border border-border bg-bg p-8">
+              <div className="flex h-full flex-col border border-border bg-bg p-8">
                 <div className="flex items-center justify-between">
-                  <span className="flex size-11 items-center justify-center rounded-xl bg-ink text-white">
+                  <span className="flex size-11 items-center justify-center bg-ink text-white">
                     <Sparkles aria-hidden className="size-5" />
                   </span>
                   <span className="font-heading text-lg font-bold text-ink-soft/30">{w.number}</span>

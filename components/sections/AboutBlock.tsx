@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { Check } from "lucide-react";
 import { about, stats } from "@/content/home";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
+import { RevealImage } from "@/components/ui/RevealImage";
 import { Tag } from "@/components/ui/Tag";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PixelDissolve } from "@/components/ui/PixelDissolve";
@@ -15,16 +15,12 @@ export function AboutBlock() {
       <div className="bg-surface">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
           <Reveal className="relative" scale>
-            <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
-              <Image
-                src="/about-office.jpg"
-                alt=""
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="absolute bottom-6 left-6 rounded-2xl border border-border bg-bg px-6 py-4 shadow-sm">
+            <RevealImage
+              src="/about-office.jpg"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="group aspect-[4/3] w-full"
+            />
+            <div className="absolute bottom-6 left-6 border border-border bg-bg px-6 py-4 shadow-sm">
               <p className="font-heading text-3xl font-bold text-accent">
                 {highlight.value}
                 {highlight.suffix}

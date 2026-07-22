@@ -15,7 +15,7 @@ export function Button({ href, variant = "primary", star = false, children, clas
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center gap-2 rounded-full px-6 py-3 font-heading text-sm font-medium transition-all duration-300",
+        "inline-flex items-center gap-2 px-6 py-3 font-heading text-sm font-medium transition-all duration-300",
         variant === "primary" && "bg-ink text-white hover:-translate-y-0.5 hover:bg-ink/90",
         variant === "ghost" && "border border-border text-ink hover:border-accent hover:text-accent",
         className,

@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { PixelDissolve } from "@/components/ui/PixelDissolve";
 import { Reveal } from "@/components/ui/Reveal";
+import { RevealImage } from "@/components/ui/RevealImage";
 
 describe("PixelDissolve", () => {
   it("renders an aria-hidden container with more than 10 pixel squares", () => {
@@ -20,5 +21,12 @@ describe("Reveal scale option", () => {
       </Reveal>,
     );
     expect(screen.getByText("Settled")).toBeInTheDocument();
+  });
+});
+
+describe("RevealImage", () => {
+  it("renders an image with the given alt text", () => {
+    render(<RevealImage src="/case-ui.jpg" alt="Reveal example" sizes="50vw" />);
+    expect(screen.getByAltText("Reveal example")).toBeInTheDocument();
   });
 });

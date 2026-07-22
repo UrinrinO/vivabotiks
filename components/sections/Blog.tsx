@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { blogIntro, posts } from "@/content/marketing";
 import { Reveal } from "@/components/ui/Reveal";
+import { RevealImage } from "@/components/ui/RevealImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Tag } from "@/components/ui/Tag";
 
@@ -12,34 +12,29 @@ export function Blog() {
         <Reveal>
           <SectionHeading eyebrow={blogIntro.eyebrow} title={blogIntro.title} />
         </Reveal>
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-x-8 gap-y-14 md:grid-cols-3">
           {posts.map((post, i) => (
             <Reveal key={post.title} delay={i * 0.08} scale>
-              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-bg transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-sm">
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt=""
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+              <article className="group flex h-full flex-col">
+                <RevealImage
+                  src={post.image}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="aspect-[4/5] w-full"
+                />
+                <div className="mt-6 flex items-center gap-3">
+                  <Tag>{post.category}</Tag>
+                  <span className="text-xs text-ink-soft">{post.date}</span>
+                </div>
+                <div className="mt-4 flex items-start justify-between gap-4 border-b border-border pb-5">
+                  <h3 className="font-heading text-xl font-semibold text-ink sm:text-2xl">
+                    {post.title}
+                  </h3>
+                  <ArrowUpRight
+                    aria-hidden
+                    className="mt-1 size-5 shrink-0 text-accent transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   />
                 </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <div className="flex items-center gap-3">
-                    <Tag>{post.category}</Tag>
-                    <span className="text-xs text-ink-soft">{post.date}</span>
-                  </div>
-                  <h3 className="mt-4 font-heading text-lg font-semibold text-ink">{post.title}</h3>
-                  <p className="mt-4 flex-1 border-t border-border pt-4 text-sm leading-relaxed text-ink-soft">{post.excerpt}</p>
-                  <span className="mt-6 inline-flex items-center gap-1 font-heading text-sm font-medium text-accent">
-                    Read more
-                    <ArrowUpRight
-                      aria-hidden
-                      className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                    />
-                  </span>
-                </div>
+                <p className="mt-5 flex-1 text-sm leading-relaxed text-ink-soft">{post.excerpt}</p>
               </article>
             </Reveal>
           ))}

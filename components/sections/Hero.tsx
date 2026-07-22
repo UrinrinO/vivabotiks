@@ -40,7 +40,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-20 mx-auto flex min-h-svh max-w-6xl flex-col justify-center px-6 pt-28 pb-60">
         <div className="max-w-2xl">
-          <span className="inline-flex items-center rounded-lg bg-gradient-to-r from-[#3b5bdb] to-[#5a7bff] px-4 py-2 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-white">
+          <span className="inline-flex items-center bg-gradient-to-r from-[#3b5bdb] to-[#5a7bff] px-4 py-2 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-white">
             ^Software, reimagined with AI^
           </span>
           <h1 className="mt-7 font-heading text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[4.5rem]">
@@ -50,14 +50,14 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href={hero.primaryCta.href}
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-heading text-sm font-medium text-ink transition-transform duration-300 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-white px-6 py-3 font-heading text-sm font-medium text-ink transition-transform duration-300 hover:-translate-y-0.5"
             >
               <Star aria-hidden className="size-4 fill-accent text-accent" />
               {hero.primaryCta.label}
             </Link>
             <Link
               href={hero.secondaryCta.href}
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 font-heading text-sm font-medium text-white transition-colors duration-300 hover:border-accent-bright hover:text-accent-bright"
+              className="inline-flex items-center gap-2 border border-white/25 px-6 py-3 font-heading text-sm font-medium text-white transition-colors duration-300 hover:border-accent-bright hover:text-accent-bright"
             >
               {hero.secondaryCta.label}
             </Link>
@@ -66,13 +66,13 @@ export function Hero() {
       </div>
 
       {/* Floating glass card over the image, like the reference overlay */}
-      <div className="absolute bottom-48 right-10 z-20 hidden w-60 rounded-2xl border border-white/10 bg-white/[0.07] p-4 backdrop-blur-md lg:block">
+      <div className="absolute bottom-48 right-10 z-20 hidden w-60 border border-white/10 bg-white/[0.07] p-4 backdrop-blur-md lg:block">
         <p className="font-heading text-xs font-medium uppercase tracking-widest text-white/50">
           ^Project preview^
         </p>
-        <div className="mt-3 h-2 w-full rounded-full bg-white/10" />
-        <div className="mt-2 h-2 w-2/3 rounded-full bg-white/10" />
-        <div className="mt-4 rounded-full bg-white py-2 text-center font-heading text-xs font-medium text-ink">
+        <div className="mt-3 h-2 w-full bg-white/10" />
+        <div className="mt-2 h-2 w-2/3 bg-white/10" />
+        <div className="mt-4 bg-white py-2 text-center font-heading text-xs font-medium text-ink">
           {hero.primaryCta.label}
         </div>
       </div>

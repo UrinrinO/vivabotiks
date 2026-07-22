@@ -65,7 +65,7 @@ export function Navbar() {
           <Link
             href={navCta.href}
             className={cn(
-              "hidden items-center gap-2 rounded-full px-5 py-2.5 font-heading text-sm font-medium transition-colors sm:inline-flex",
+              "hidden items-center gap-2 px-5 py-2.5 font-heading text-sm font-medium transition-colors sm:inline-flex",
               overHero ? "bg-white text-ink hover:bg-white/90" : "bg-ink text-white hover:bg-ink/90",
             )}
           >
@@ -77,7 +77,7 @@ export function Navbar() {
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((o) => !o)}
             className={cn(
-              "rounded-full border p-2.5 lg:hidden",
+              "border p-2.5 lg:hidden",
               overHero ? "border-white/30 text-white" : "border-border text-ink",
             )}
           >
@@ -114,7 +114,7 @@ export function Navbar() {
             <Link
               href={navCta.href}
               onClick={() => setOpen(false)}
-              className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-ink px-6 py-3 font-heading text-sm font-medium text-white"
+              className="mt-6 inline-flex w-fit items-center gap-2 bg-ink px-6 py-3 font-heading text-sm font-medium text-white"
             >
               <Star aria-hidden className="size-4 fill-accent-bright text-accent-bright" />
               {navCta.label}
