@@ -1,24 +1,66 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Check } from "lucide-react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { services } from "@/content/home";
 import { Reveal } from "@/components/ui/Reveal";
 import { RevealImage } from "@/components/ui/RevealImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
+const PER_PAGE = 2;
+
 export function Services() {
+  const reduce = useReducedMotion();
+  const pageCount = Math.ceil(services.length / PER_PAGE);
+  const [page, setPage] = useState(0);
+  const visible = services.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
+
+  const prev = () => setPage((p) => (p - 1 + pageCount) % pageCount);
+  const next = () => setPage((p) => (p + 1) % pageCount);
+
   return (
     <section className="mx-auto max-w-6xl px-6 py-24">
       <Reveal>
-        <SectionHeading
-          eyebrow="What we do"
-          title="Services built around outcomes"
-          intro="Four core capabilities, delivered end to end by a senior team."
-        />
+        <div className="flex items-end justify-between gap-6">
+          <SectionHeading
+            eyebrow="What we do"
+            title="Services built around outcomes"
+            intro="Four core capabilities, delivered end to end by a senior team."
+          />
+          <div className="flex shrink-0 gap-3">
+            <button
+              type="button"
+              onClick={prev}
+              aria-label="Previous services"
+              className="border border-border p-3 text-ink transition-colors hover:border-accent hover:text-accent"
+            >
+              <ArrowLeft aria-hidden className="size-5" />
+            </button>
+            <button
+              type="button"
+              onClick={next}
+              aria-label="Next services"
+              className="border border-border p-3 text-ink transition-colors hover:border-accent hover:text-accent"
+            >
+              <ArrowRight aria-hidden className="size-5" />
+            </button>
+          </div>
+        </div>
       </Reveal>
-      <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2">
-        {services.map((service, i) => (
-          <Reveal key={service.number} delay={i * 0.08} scale>
-            <Link href={service.href} className="group flex h-full flex-col">
+
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={page}
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -40 }}
+          transition={{ duration: reduce ? 0 : 0.35, ease: "easeOut" }}
+          className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2"
+        >
+          {visible.map((service) => (
+            <Link key={service.number} href={service.href} className="group flex h-full flex-col">
               <RevealImage
                 src={service.image}
                 sizes="(max-width: 640px) 100vw, 50vw"
@@ -45,9 +87,9 @@ export function Services() {
                 ))}
               </ul>
             </Link>
-          </Reveal>
-        ))}
-      </div>
+          ))}
+        </motion.div>
+      </AnimatePresence>
     </section>
   );
 }
