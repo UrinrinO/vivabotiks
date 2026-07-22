@@ -24,7 +24,7 @@ export const caseStudiesIntro: Intro = {
   eyebrow: "Industry solutions",
   title: "Proven in regulated industries",
   description:
-    "Intelligent systems delivered where the stakes are highest — healthcare, aviation, and financial services.",
+    "Intelligent systems delivered where the stakes are highest: healthcare, aviation, and financial services.",
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -54,7 +54,7 @@ export const caseStudies: CaseStudy[] = [
 // Quote wording is PLACEHOLDER — replace with Uri's real statement before launch.
 export const founderQuote: FounderQuote = {
   quote:
-    "Vivabotiks means living robots — software that learns, adapts, and quietly does the heavy lifting. That's the standard every system we ship is held to.",
+    "Vivabotiks means living robots: software that learns, adapts, and quietly does the heavy lifting. That's the standard every system we ship is held to.",
   name: "Uri",
   role: "Founder & CEO, Vivabotiks",
 };
@@ -67,11 +67,11 @@ export const whyUsIntro: Intro = {
 };
 
 export const whyUs: WhyItem[] = [
-  { number: "01", title: "Founder-led engineering", description: "The director architects, builds, and reviews every project personally — no hand-offs.", image: "/why-team.jpg" },
-  { number: "02", title: "AI that ships", description: "From LLM applications to MLOps platforms — research-grade thinking, production-grade delivery.", image: "/svc-ai.jpg" },
+  { number: "01", title: "Founder-led engineering", description: "The director architects, builds, and reviews every project personally. No hand-offs.", image: "/why-team.jpg" },
+  { number: "02", title: "AI that ships", description: "From LLM applications to MLOps platforms: research-grade thinking, production-grade delivery.", image: "/svc-ai.jpg" },
   { number: "03", title: "Data you can trust", description: "GDPR and NHS-grade governance, anonymisation, and drift monitoring built into every pipeline.", image: "/svc-data.jpg" },
   { number: "04", title: "End-to-end delivery", description: "From first idea to launch and maintenance, one accountable team owns it.", image: "/case-software.jpg" },
-  { number: "05", title: "Regulated-industry ready", description: "Healthcare, aviation, and fintech delivery — where compliance is the baseline, not an afterthought.", image: "/about-office.jpg" },
+  { number: "05", title: "Regulated-industry ready", description: "Healthcare, aviation, and fintech delivery, where compliance is the baseline rather than an afterthought.", image: "/about-office.jpg" },
   { number: "06", title: "Award-winning expertise", description: "Award-winning AI research at the helm, with award-winning executives joining the leadership.", image: "/case-ui.jpg" },
 ];
 
@@ -87,7 +87,7 @@ export const posts: Post[] = [
     category: "News",
     title: "Hello from Cardiff: introducing Vivabotiks",
     excerpt:
-      "Meet Vivabotiks — living robots. An AI software company engineering machine learning, data platforms, and smart software from the USW Startup Stiwdio in Cardiff, Wales.",
+      "Meet Vivabotiks, the living robots company. We engineer machine learning, data platforms, and smart software from the USW Startup Stiwdio in Cardiff, Wales.",
     image: "/article.jpg",
   },
   {
@@ -95,7 +95,7 @@ export const posts: Post[] = [
     category: "Healthcare AI",
     title: "Early-detection AI, from research to the clinic",
     excerpt:
-      "What we learned building early-detection models under clinical governance — and why anonymisation-first pipelines are the only way to earn trust in healthcare AI.",
+      "What we learned building early-detection models under clinical governance, and why anonymisation-first pipelines are the only way to earn trust in healthcare AI.",
     image: "/case-ui.jpg",
   },
   {

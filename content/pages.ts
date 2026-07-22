@@ -11,7 +11,7 @@ export const stubPages: Record<"about" | "services" | "articles" | "contact", St
     breadcrumb: "About",
     message:
       "Our full story is on its way. In the meantime, we'd love to talk about your next project.",
-    metaDescription: "About Vivabotiks — an AI-powered software company.",
+    metaDescription: "About Vivabotiks, an AI-powered software company.",
   },
   services: {
     title: "Our Services",

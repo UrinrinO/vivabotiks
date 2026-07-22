@@ -5,7 +5,7 @@ export type Stat = { value: number; suffix: string; label: string };
 export const hero = {
   headline: "AI-powered software for ambitious businesses",
   subline:
-    "Vivabotiks engineers intelligent systems — AI, data platforms, and full-stack software — from Cardiff, Wales, for businesses everywhere.",
+    "Vivabotiks engineers intelligent systems from Cardiff, Wales: AI, data platforms, and full-stack software for businesses everywhere.",
   primaryCta: { label: "Book a discovery call", href: "/contact" },
   secondaryCta: { label: "Our services", href: "/services" },
   badge: "Live robots. Smart software.",
@@ -23,7 +23,7 @@ export const services: Service[] = [
     number: "01",
     title: "AI & Machine Learning",
     description:
-      "Production LLM applications and end-to-end ML platforms — from experiment tracking and model serving to drift detection — built responsibly under GDPR-grade governance.",
+      "Production LLM applications and end-to-end ML platforms, from experiment tracking and model serving to drift detection. Built responsibly under GDPR-grade governance.",
     href: "/services",
     bullets: ["LLM apps, RAG & fine-tuning", "MLOps platforms end to end", "Responsible AI & data governance"],
     image: "/svc-ai.jpg",
@@ -41,7 +41,7 @@ export const services: Service[] = [
     number: "03",
     title: "Software Development",
     description:
-      "Web and mobile products engineered end to end — architecture, build, test, launch, and the cloud DevOps to run them reliably in production.",
+      "Web and mobile products engineered end to end: architecture, build, test, launch, and the cloud DevOps to run them reliably in production.",
     href: "/services",
     bullets: ["Web & mobile apps", "APIs & integrations", "Cloud-native DevOps"],
     image: "/svc-software.jpg",
@@ -50,7 +50,7 @@ export const services: Service[] = [
     number: "04",
     title: "IoT & Robotics",
     description:
-      "Living up to our name — intelligence connected to the physical world: sensor data platforms, connected devices, and the smart systems that run on them.",
+      "Living up to our name: intelligence connected to the physical world. Sensor data platforms, connected devices, and the smart systems that run on them.",
     href: "/services",
     bullets: ["Connected devices", "Sensor data platforms", "Edge intelligence"],
     image: "/svc-3d.jpg",
@@ -62,8 +62,8 @@ export const about = {
   eyebrow: "Who we are",
   headline: "Leading Software Engineering Company",
   paragraphs: [
-    "Vivabotiks — from “living robots” — is an AI-first software company registered in Wales, UK. We engineer intelligent systems end to end: machine-learning platforms, data pipelines, and the production software around them.",
-    "Founded and led by an award-winning AI engineer with clinical research experience alongside NHS Wales, and with award-winning executives joining the leadership team, every project stays senior-led from first architecture to production.",
+    "Vivabotiks takes its name from “living robots”. We are an AI-first software company registered in Wales, UK, engineering intelligent systems end to end: machine-learning platforms, data pipelines, and the production software around them.",
+    "An award-winning AI engineer founded the company and leads every build, bringing clinical research experience alongside NHS Wales. Award-winning executives are joining the leadership team, and every project stays senior-led from first architecture to production.",
   ],
   motif: ["Idea", "Think", "Create"],
   // Shown inside the dark stat panel over the photo (sentence from the old site's about copy).

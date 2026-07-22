@@ -8,7 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 const encodeSans = Encode_Sans({ subsets: ["latin"], variable: "--font-encode-sans" });
 
 export const metadata: Metadata = {
-  title: { default: siteMeta.title, template: `%s — ${siteMeta.name}` },
+  title: { default: siteMeta.title, template: `%s | ${siteMeta.name}` },
   description: siteMeta.description,
   metadataBase: new URL(siteMeta.url),
   openGraph: {

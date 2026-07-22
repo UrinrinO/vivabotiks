@@ -2,9 +2,9 @@ export type NavLink = { label: string; href: string };
 
 export const siteMeta = {
   name: "Vivabotiks",
-  title: "Vivabotiks — AI-Powered Software Company",
+  title: "Vivabotiks | AI-Powered Software Company",
   description:
-    "Vivabotiks — living robots — is a Welsh AI software company: machine learning, data engineering, software development, and IoT & robotics for healthcare, aviation, and fintech.",
+    "Vivabotiks, the living robots company: Welsh AI software covering machine learning, data engineering, software development, and IoT & robotics for healthcare, aviation, and fintech.",
   url: "https://vivabotiks.co.uk", // PLACEHOLDER — confirm production domain before launch
 };
 
