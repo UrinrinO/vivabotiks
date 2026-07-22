@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import { about, stats } from "@/content/home";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { RevealImage } from "@/components/ui/RevealImage";
@@ -23,8 +24,7 @@ export function AboutBlock() {
             {/* Dark stat panel overlapping the photo's lower-right */}
             <div className="absolute -bottom-8 right-0 w-[72%] max-w-sm bg-ink p-8 text-white sm:w-[60%]">
               <p className="font-heading text-5xl font-bold">
-                {highlight.value}
-                {highlight.suffix}
+                <AnimatedCounter value={highlight.value} suffix={highlight.suffix} />
               </p>
               <p className="mt-4 font-semibold">{highlight.label}</p>
               <p className="mt-3 text-sm leading-relaxed text-white/70">{about.statBlurb}</p>

@@ -26,7 +26,7 @@ export function RevealImage({
   sizes,
   className,
   priority,
-  plate = "#1E38A6",
+  plate = "#04131E",
 }: RevealImageProps) {
   const reduce = useReducedMotion();
 

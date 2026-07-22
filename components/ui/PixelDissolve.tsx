@@ -1,3 +1,6 @@
+"use client";
+
+import { motion, useReducedMotion } from "motion/react";
 import { cn } from "@/lib/cn";
 
 // Deterministic, hand-tuned dither pattern (NO Math.random — stable across SSR).
@@ -10,6 +13,10 @@ const PATTERN: readonly (readonly number[])[] = [
   [1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1],
 ];
 
+// Deterministic pseudo-random stagger so tinted cells twinkle in individually
+// (mirrors the reference recording's dissolve-in) without breaking SSR.
+const delayFor = (row: number, col: number) => (((row * 31 + col * 17) % 13) / 13) * 0.45;
+
 type PixelDissolveProps = {
   from?: string;
   to?: string;
@@ -21,23 +28,63 @@ export function PixelDissolve({
   to = "var(--color-surface)",
   className,
 }: PixelDissolveProps) {
+  const reduce = useReducedMotion();
+
+  if (reduce) {
+    return (
+      <div aria-hidden className={cn("flex h-20 w-full flex-col", className)}>
+        {PATTERN.map((row, rowIndex) => (
+          <div key={rowIndex} className="flex w-full flex-1">
+            {row.map((cell, cellIndex) => (
+              <div
+                key={cellIndex}
+                data-pixel
+                className="flex-1"
+                style={{ backgroundColor: cell ? to : from }}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
-    <div
+    <motion.div
       aria-hidden
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-40px" }}
       className={cn("flex h-20 w-full flex-col", className)}
     >
       {PATTERN.map((row, rowIndex) => (
         <div key={rowIndex} className="flex w-full flex-1">
-          {row.map((cell, cellIndex) => (
-            <div
-              key={cellIndex}
-              data-pixel
-              className="flex-1"
-              style={{ backgroundColor: cell ? to : from }}
-            />
-          ))}
+          {row.map((cell, cellIndex) =>
+            cell ? (
+              <motion.div
+                key={cellIndex}
+                data-pixel
+                className="flex-1"
+                style={{ backgroundColor: to }}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: { delay: delayFor(rowIndex, cellIndex), duration: 0.25 },
+                  },
+                }}
+              />
+            ) : (
+              <div
+                key={cellIndex}
+                data-pixel
+                className="flex-1"
+                style={{ backgroundColor: from }}
+              />
+            ),
+          )}
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }
