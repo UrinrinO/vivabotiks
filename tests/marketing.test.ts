@@ -10,7 +10,7 @@ describe("marketing content", () => {
   });
   it("each post has a real title, date, and image asset", () => {
     expect(posts.map((p) => p.title)).toEqual([
-      "Vivabotiks is now registered in Wales",
+      "Hello from Cardiff: introducing Vivabotiks",
       "Early-detection AI, from research to the clinic",
       "Forecasting that operations teams actually use",
     ]);

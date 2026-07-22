@@ -85,9 +85,9 @@ export const posts: Post[] = [
   {
     date: "2026-07-01", // PLACEHOLDER date
     category: "News",
-    title: "Vivabotiks is now registered in Wales",
+    title: "Hello from Cardiff: introducing Vivabotiks",
     excerpt:
-      "We've made it official: Vivabotiks Ltd is now a UK company, building from the USW Startup Stiwdio in Cardiff — bringing AI-smart software to businesses across the UK and beyond.",
+      "Meet Vivabotiks — living robots. An AI software company engineering machine learning, data platforms, and smart software from the USW Startup Stiwdio in Cardiff, Wales.",
     image: "/article.jpg",
   },
   {
