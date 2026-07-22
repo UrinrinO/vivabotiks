@@ -17,11 +17,11 @@ describe("content shape", () => {
     expect(about.checks).toHaveLength(3);
     expect(about.motif).toEqual(["Idea", "Think", "Create"]);
   });
-  it("footer has contact info and socials", () => {
+  it("footer has contact info and the highlighted headline", () => {
     expect(footerContent.contact.email).toContain("@");
-    expect(footerContent.contact.email2).toContain("@");
-    expect(footerContent.contact.phone2.length).toBeGreaterThan(0);
-    expect(footerContent.socials.length).toBeGreaterThan(0);
+    expect(footerContent.contact.phone.length).toBeGreaterThan(0);
+    expect(footerContent.contact.addressLines.length).toBeGreaterThan(0);
+    expect(footerContent.headline.highlight.length).toBeGreaterThan(0);
     expect(siteMeta.name).toBe("Vivabotiks");
   });
   it("has a contact form URL", () => {

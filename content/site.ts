@@ -5,7 +5,7 @@ export const siteMeta = {
   title: "Vivabotiks — AI-Powered Software Company",
   description:
     "Vivabotiks builds intelligent software: AI & automation, custom development, data analytics, and 3D design for ambitious businesses.",
-  url: "https://vivabotiks.com", // PLACEHOLDER — confirm production domain before launch
+  url: "https://vivabotiks.co.uk", // PLACEHOLDER — confirm production domain before launch
 };
 
 export const navLinks: NavLink[] = [
@@ -21,28 +21,22 @@ export const navCta = { label: "Start your project", href: "/contact" };
 // Google Form the contact page links out to (from the previous site).
 export const contactFormUrl = "https://forms.gle/i1QK6pVN63NJCPF87";
 
+// Footer recreates the previous site's footer: big headline with an amber
+// highlight, the six service links, and the email/address/phone columns.
 export const footerContent = {
-  blurb:
-    "Vivabotiks is an AI-powered software company. We design, build, and maintain intelligent products for businesses across Africa and beyond.",
+  headline: { pre: "Best", highlight: "Software Agency", post: "for Your Project" },
   services: [
-    "AI & Automation",
-    "Software Development",
-    "Data Analytics",
-    "3D Design & Animation",
+    "Web Development",
+    "Mobile App Development",
+    "Data Analytics & IOT",
+    "Enterprise Solutions",
+    "UI/UX Designs",
+    "3D Designs & Animation",
   ],
   contact: {
-    email: "info@vivabotiks.com",
-    email2: "contact@vivabotiks.com",
-    phone: "+234 803 050 1670",
-    phone2: "+234 916 546 8417",
-    location: "Polystar building, Maruwa bus stop, Lekki",
+    email: "info@vivabotiks.co.uk",
+    phone: "07931 046 771",
+    addressLines: ["USW Startup Stiwdio", "Cardiff, Wales"],
   },
-  hours: "Mon–Fri, 9am–6pm WAT", // PLACEHOLDER — confirm real hours
-  // PLACEHOLDER socials — replace hrefs with real profiles before launch
-  socials: [
-    { label: "X", href: "#" },
-    { label: "Instagram", href: "#" },
-    { label: "LinkedIn", href: "#" },
-  ],
-  copyrightName: "Vivabotiks",
+  copyrightName: "Vivabotiks Limited",
 };

@@ -1,74 +1,52 @@
 import Link from "next/link";
-import { footerContent, navLinks, siteMeta } from "@/content/site";
+import { footerContent } from "@/content/site";
 
+// Recreates the previous Vivabotiks footer: a fixed, full-height navy panel
+// that the page content scrolls over and reveals (the page wrapper in
+// layout.tsx carries a matching 100svh bottom margin). Scroll-driven layout
+// only — no timed animation, so it is reduced-motion safe.
 export function Footer() {
+  const { headline, services, contact, copyrightName } = footerContent;
   return (
-    <footer className="border-t border-border bg-surface">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 sm:grid-cols-2 lg:grid-cols-5">
-        <div className="lg:col-span-1">
-          <p className="font-heading text-xl font-bold text-ink">{siteMeta.name}</p>
-          <p className="mt-4 text-sm leading-relaxed text-ink-soft">{footerContent.blurb}</p>
-          <ul className="mt-6 flex gap-4">
-            {footerContent.socials.map((s) => (
-              <li key={s.label}>
-                <a
-                  href={s.href}
-                  className="text-sm font-medium text-ink-soft transition-colors hover:text-accent"
-                >
-                  {s.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <nav aria-label="Footer">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-ink">Quick links</p>
-          <ul className="mt-4 space-y-3">
-            {navLinks.map((l) => (
-              <li key={l.href}>
-                <Link href={l.href} className="text-sm text-ink-soft transition-colors hover:text-accent">
-                  {l.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div>
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-ink">Services</p>
-          <ul className="mt-4 space-y-3">
-            {footerContent.services.map((s) => (
-              <li key={s} className="text-sm text-ink-soft">
+    <footer className="fixed inset-x-0 bottom-0 z-0 flex h-svh flex-col justify-between overflow-y-auto bg-ink text-white">
+      <div className="mx-auto grid w-full max-w-6xl flex-1 items-center gap-12 px-6 pt-28 lg:grid-cols-[3fr_2fr]">
+        <h2 className="font-heading text-5xl font-semibold leading-tight sm:text-6xl lg:text-7xl">
+          {headline.pre} <span className="text-accent-bright">{headline.highlight}</span> {headline.post}
+        </h2>
+        <ul className="space-y-3 text-lg text-white/85 lg:text-right">
+          {services.map((s) => (
+            <li key={s}>
+              <Link href="/services" className="transition-colors hover:text-accent-bright">
                 {s}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-ink">Contact</p>
-          <ul className="mt-4 space-y-3 text-sm text-ink-soft">
-            <li>
-              <a href={`mailto:${footerContent.contact.email}`} className="transition-colors hover:text-accent">
-                {footerContent.contact.email}
-              </a>
+              </Link>
             </li>
-            <li>
-              <a href={`mailto:${footerContent.contact.email2}`} className="transition-colors hover:text-accent">
-                {footerContent.contact.email2}
-              </a>
-            </li>
-            <li>{footerContent.contact.phone}</li>
-            <li>{footerContent.contact.phone2}</li>
-            <li>{footerContent.contact.location}</li>
-          </ul>
-        </div>
-        <div>
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-ink">Hours</p>
-          <p className="mt-4 text-sm text-ink-soft">{footerContent.hours}</p>
-        </div>
+          ))}
+        </ul>
       </div>
-      <div className="border-t border-border py-6">
-        <p className="mx-auto max-w-6xl px-6 text-xs text-ink-soft">
-          © {new Date().getFullYear()} {footerContent.copyrightName}. All rights reserved.
+
+      <div className="mx-auto w-full max-w-6xl px-6 pb-10">
+        <div className="grid gap-8 text-sm text-white/70 sm:grid-cols-3">
+          <div>
+            <p className="text-white">Email</p>
+            <p className="mt-3">
+              <a href={`mailto:${contact.email}`} className="hover:text-accent-bright">{contact.email}</a>
+            </p>
+          </div>
+          <div className="sm:text-center">
+            <p className="text-white">Address</p>
+            <div className="mt-3">
+              {contact.addressLines.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+          </div>
+          <div className="sm:text-right">
+            <p className="text-white">Phone</p>
+            <p className="mt-3">{contact.phone}</p>
+          </div>
+        </div>
+        <p className="mt-12 text-center text-sm text-white/60">
+          © Copyright {new Date().getFullYear()}. {copyrightName}.
         </p>
       </div>
     </footer>

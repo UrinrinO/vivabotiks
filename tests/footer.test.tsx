@@ -4,12 +4,26 @@ import { Footer } from "@/components/layout/Footer";
 import { footerContent } from "@/content/site";
 
 describe("Footer", () => {
-  it("renders contact info, services, and hours", () => {
+  it("renders the old-site headline with the highlighted phrase", () => {
     render(<Footer />);
-    expect(screen.getByText(footerContent.contact.email)).toBeInTheDocument();
+    const { pre, highlight, post } = footerContent.headline;
+    expect(
+      screen.getByRole("heading", { name: `${pre} ${highlight} ${post}` }),
+    ).toBeInTheDocument();
+  });
+
+  it("renders all service links, contact details, and copyright", () => {
+    render(<Footer />);
     for (const s of footerContent.services) {
-      expect(screen.getByText(s)).toBeInTheDocument();
+      expect(screen.getByRole("link", { name: s })).toBeInTheDocument();
     }
-    expect(screen.getByText(footerContent.hours)).toBeInTheDocument();
+    expect(screen.getByText(footerContent.contact.email)).toBeInTheDocument();
+    expect(screen.getByText(footerContent.contact.phone)).toBeInTheDocument();
+    for (const line of footerContent.contact.addressLines) {
+      expect(screen.getByText(line)).toBeInTheDocument();
+    }
+    expect(
+      screen.getByText(new RegExp(footerContent.copyrightName)),
+    ).toBeInTheDocument();
   });
 });
