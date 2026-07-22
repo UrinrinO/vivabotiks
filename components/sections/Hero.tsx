@@ -41,7 +41,7 @@ export function Hero() {
       <div className="relative z-20 mx-auto flex h-full max-w-6xl flex-col justify-center px-6 pt-24 pb-36">
         <div className="max-w-2xl">
           <span className="inline-flex items-center bg-gradient-to-r from-[#3b5bdb] to-[#5a7bff] px-4 py-2 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-white">
-            ^Software, reimagined with AI^
+            Software, reimagined with AI
           </span>
           <h1 className="relative z-20 mt-7 max-w-none text-balance font-heading text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:w-[58rem] lg:text-[4.5rem]">
             {hero.headline}
@@ -68,7 +68,7 @@ export function Hero() {
       {/* Floating glass card over the image, like the reference overlay */}
       <div className="absolute bottom-48 right-10 z-20 hidden w-60 border border-white/10 bg-white/[0.07] p-4 backdrop-blur-md lg:block">
         <p className="font-heading text-xs font-medium uppercase tracking-widest text-white/50">
-          ^Project preview^
+          Project preview
         </p>
         <div className="mt-3 h-2 w-full bg-white/10" />
         <div className="mt-2 h-2 w-2/3 bg-white/10" />
