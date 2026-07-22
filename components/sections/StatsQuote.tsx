@@ -2,6 +2,7 @@ import { stats } from "@/content/home";
 import { founderQuote } from "@/content/marketing";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Reveal } from "@/components/ui/Reveal";
+import { PixelDissolve } from "@/components/ui/PixelDissolve";
 
 export function StatsQuote() {
   const initials = founderQuote.name
@@ -10,7 +11,7 @@ export function StatsQuote() {
     .slice(0, 2)
     .join("");
   return (
-    <section className="relative overflow-hidden bg-[#05070d] text-white">
+    <section className="relative overflow-hidden bg-[#04060c] text-white">
       <div
         aria-hidden
         className="pointer-events-none absolute right-[-8rem] top-0 size-[32rem] rounded-full bg-[#2f56ff]/20 blur-[120px]"
@@ -36,7 +37,7 @@ export function StatsQuote() {
             <figcaption className="mt-6 flex items-center gap-4">
               <span
                 aria-hidden
-                className="flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-bright font-heading text-sm font-bold text-[#05070d]"
+                className="flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-bright font-heading text-sm font-bold text-[#04060c]"
               >
                 {initials}
               </span>
@@ -48,6 +49,9 @@ export function StatsQuote() {
           </figure>
         </Reveal>
       </div>
+      {/* Bottom of the dark band: white squares dissolve in over the dark tail
+          so the dark->light boundary into the section below reads as a fade. */}
+      <PixelDissolve className="relative" from="transparent" to="var(--color-bg)" />
     </section>
   );
 }
