@@ -5,7 +5,7 @@ export const siteMeta = {
   title: "Vivabotiks | AI-Powered Software Company",
   description:
     "Vivabotiks, the living robots company: Welsh AI software covering machine learning, data engineering, software development, and IoT & robotics for healthcare, aviation, and fintech.",
-  url: "https://vivabotiks.co.uk", // PLACEHOLDER — confirm production domain before launch
+  url: "https://vivabotiks.com",
 };
 
 export const navLinks: NavLink[] = [
@@ -30,7 +30,7 @@ export const footerContent = {
     "Aviation & Fintech Solutions",
   ],
   contact: {
-    email: "info@vivabotiks.co.uk",
+    email: "info@vivabotiks.com",
     phone: "07931 046 771",
     addressLines: ["USW Startup Stiwdio", "Cardiff, Wales"],
   },
