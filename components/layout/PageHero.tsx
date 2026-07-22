@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function PageHero({ title, breadcrumb }: { title: string; breadcrumb: string }) {
   return (
-    <div className="relative overflow-hidden bg-[#05070d] pt-36 pb-20 text-white">
+    <div className="relative overflow-hidden bg-[#04131E] pt-36 pb-20 text-white">
       <div
         aria-hidden
         className="pointer-events-none absolute -left-40 top-0 size-[34rem] rounded-full bg-[#2f56ff]/20 blur-[120px]"

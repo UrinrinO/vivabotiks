@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
-import { services } from "@/content/home";
+import { services, servicesIntro } from "@/content/home";
 import { Reveal } from "@/components/ui/Reveal";
 import { RevealImage } from "@/components/ui/RevealImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -25,9 +25,9 @@ export function Services() {
       <Reveal>
         <div className="flex items-end justify-between gap-6">
           <SectionHeading
-            eyebrow="What we do"
-            title="Services built around outcomes"
-            intro="Four core capabilities, delivered end to end by a senior team."
+            eyebrow={servicesIntro.eyebrow}
+            title={servicesIntro.title}
+            intro={servicesIntro.description}
           />
           <div className="flex shrink-0 gap-3">
             <button

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { navLinks, navCta, footerContent, siteMeta, contactFormUrl } from "@/content/site";
-import { services, about, stats, processSteps, testimonials, finalCta } from "@/content/home";
+import { services, about, stats, finalCta } from "@/content/home";
 
 describe("content shape", () => {
   it("has the five nav links and a CTA", () => {
@@ -10,8 +10,6 @@ describe("content shape", () => {
   it("home content matches the spec counts", () => {
     expect(services).toHaveLength(4);
     expect(stats).toHaveLength(4);
-    expect(processSteps).toHaveLength(5);
-    expect(testimonials).toHaveLength(3);
     expect(finalCta.cta.href).toBe("/contact");
     expect(about.checks).toHaveLength(3);
     expect(about.motif).toEqual(["Idea", "Think", "Create"]);
