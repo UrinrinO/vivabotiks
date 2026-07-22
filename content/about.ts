@@ -1,5 +1,8 @@
-// About page copy — drafted from Uri's background; review wording before launch.
+// About page copy — company voice, no personal names. Team/lifecycle wording
+// carried over from the previous site (lightly cleaned); review before launch.
 export type Credential = { title: string; detail: string; year?: string };
+export type LifecycleStep = { number: string; title: string; description: string };
+export type TeamCallout = { title: string; description: string };
 
 export const aboutPage = {
   metaTitle: "About",
@@ -17,18 +20,57 @@ export const aboutPage = {
     ],
   },
 
-  leadership: {
-    eyebrow: "Leadership",
-    title: "Founder-led, award-winning",
-    founder: {
-      name: "Uri",
-      role: "Founder & CEO",
-      bio: [
-        "Uri founded Vivabotiks and leads every project personally. He is an AI and MLOps engineer with more than nine years of delivery across healthcare, aviation, and fintech, and he holds an MSc in Artificial Intelligence from the University of South Wales.",
-        "His research on early detection of peripheral arterial disease won the university's Best Industrial Project award, with models reaching over 92% accuracy against clinical benchmarks. He has worked inside NHS Wales data governance on respiratory research, and he builds production LLM systems for sensitive clinical settings.",
-      ],
-    },
-    execsNote: "He won't be leading alone for long: award-winning executives are joining the leadership team.",
+  team: {
+    eyebrow: "The team",
+    title: "Skilled professionals with vast experience",
+    paragraphs: [
+      "Our team has a wide range of skills and experience, and we are always looking for new challenges. We are committed to providing the best possible service to our clients, and we believe that our work should speak for itself. If you are looking for a team of software developers who can deliver the latest technology solutions, reach out and we will be glad to have a chat with your team.",
+    ],
+    note: "Every executive is a University of South Wales graduate. Between them they hold multiple awards and more than 42 years of experience.",
+    callouts: [
+      {
+        title: "Experienced professionals",
+        description: "Our team is composed of professionals with vast experience.",
+      },
+      {
+        title: "Free consultation",
+        description: "Contact us today to discuss your next software project.",
+      },
+    ] satisfies TeamCallout[],
+  },
+
+  lifecycle: {
+    eyebrow: "How we work",
+    title: "Project lifecycle",
+    description:
+      "For every project we take on, a dedicated team works with the client from the idea stage through deployment and maintenance.",
+    steps: [
+      {
+        number: "01",
+        title: "Ideation & planning",
+        description: "A client comes up with ideas and we begin project planning and fine tuning.",
+      },
+      {
+        number: "02",
+        title: "Architecture design",
+        description: "A UI/UX team designs sketches and a complete interactive UI for the project.",
+      },
+      {
+        number: "03",
+        title: "Coding & development",
+        description: "Front-end and back-end engineers develop a functional software codebase.",
+      },
+      {
+        number: "04",
+        title: "Testing",
+        description: "We run performance tests with the client to ensure the software meets requirements.",
+      },
+      {
+        number: "05",
+        title: "Maintenance",
+        description: "We oversee maintenance, cybersecurity policy management, and bug fixing.",
+      },
+    ] satisfies LifecycleStep[],
   },
 
   credentials: {
@@ -36,22 +78,21 @@ export const aboutPage = {
     title: "The record behind the work",
     items: [
       {
-        title: "MSc Artificial Intelligence",
-        detail: "University of South Wales, Best Industrial Project award",
-        year: "2024",
+        title: "USW-graduate leadership",
+        detail: "Every executive is a University of South Wales graduate",
+      },
+      {
+        title: "Multiple award winners",
+        detail: "Recognised across AI research and industry delivery",
+      },
+      {
+        title: "42+ years of combined experience",
+        detail: "Healthcare, aviation, fintech, and enterprise SaaS",
       },
       {
         title: "NHS Wales research collaboration",
         detail: "Clinical AI for early COPD detection in primary care",
         year: "2024",
-      },
-      {
-        title: "Generative AI for Software Developers",
-        detail: "IBM certification",
-      },
-      {
-        title: "Nine years of production software",
-        detail: "Healthcare, aviation, fintech, and enterprise SaaS",
       },
     ] satisfies Credential[],
   },

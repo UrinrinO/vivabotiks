@@ -63,14 +63,14 @@ export const about = {
   headline: "Leading Software Engineering Company",
   paragraphs: [
     "Vivabotiks takes its name from “living robots”. We are an AI-first software company registered in Wales, UK, engineering intelligent systems end to end: machine-learning platforms, data pipelines, and the production software around them.",
-    "An award-winning AI engineer founded the company and leads every build, bringing clinical research experience alongside NHS Wales. Award-winning executives are joining the leadership team, and every project stays senior-led from first architecture to production.",
+    "Every executive at Vivabotiks is a University of South Wales graduate, with multiple awards between them and more than 42 years of combined experience. Every project stays senior-led from first architecture to production.",
   ],
   motif: ["Idea", "Think", "Create"],
   // Shown inside the dark stat panel over the photo (sentence from the old site's about copy).
   statBlurb:
     "Our team has a wide range of skills and experience, and we are always looking for new challenges.",
   checks: [
-    "Founder-led, award-winning engineering",
+    "Award-winning executive team",
     "Proven in healthcare, aviation & fintech",
     "Free consultation to scope your project",
   ],

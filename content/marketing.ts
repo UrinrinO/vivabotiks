@@ -72,7 +72,7 @@ export const whyUs: WhyItem[] = [
   { number: "03", title: "Data you can trust", description: "GDPR and NHS-grade governance, anonymisation, and drift monitoring built into every pipeline.", image: "/svc-data.jpg" },
   { number: "04", title: "End-to-end delivery", description: "From first idea to launch and maintenance, one accountable team owns it.", image: "/case-software.jpg" },
   { number: "05", title: "Regulated-industry ready", description: "Healthcare, aviation, and fintech delivery, where compliance is the baseline rather than an afterthought.", image: "/about-office.jpg" },
-  { number: "06", title: "Award-winning expertise", description: "Award-winning AI research at the helm, with award-winning executives joining the leadership.", image: "/case-ui.jpg" },
+  { number: "06", title: "Award-winning leadership", description: "Every executive is a USW graduate, with multiple awards between them and over 42 years of combined experience.", image: "/case-ui.jpg" },
 ];
 
 export const blogIntro: Intro = {

@@ -12,11 +12,20 @@ describe("About page", () => {
     }
   });
 
-  it("renders the founder and the leadership note", () => {
+  it("renders the team section with callouts and the leadership note", () => {
     render(<AboutPage />);
-    expect(screen.getByText(aboutPage.leadership.founder.name)).toBeInTheDocument();
-    expect(screen.getByText(aboutPage.leadership.founder.role)).toBeInTheDocument();
-    expect(screen.getByText(aboutPage.leadership.execsNote)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: aboutPage.team.title })).toBeInTheDocument();
+    for (const c of aboutPage.team.callouts) {
+      expect(screen.getByText(c.title)).toBeInTheDocument();
+    }
+    expect(screen.getByText(aboutPage.team.note)).toBeInTheDocument();
+  });
+
+  it("renders every lifecycle step", () => {
+    render(<AboutPage />);
+    for (const step of aboutPage.lifecycle.steps) {
+      expect(screen.getByText(step.title)).toBeInTheDocument();
+    }
   });
 
   it("renders every credential", () => {
