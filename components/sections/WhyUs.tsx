@@ -1,36 +1,85 @@
-import { Sparkles } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { whyUs, whyUsIntro } from "@/content/marketing";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Tag } from "@/components/ui/Tag";
+import { cn } from "@/lib/cn";
 
 export function WhyUs() {
+  const reduce = useReducedMotion();
+  const [active, setActive] = useState(0);
+  const current = whyUs[active];
+
   return (
-    <section className="border-y border-border bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-24">
-        <Reveal>
-          <SectionHeading
-            eyebrow={whyUsIntro.eyebrow}
-            title={whyUsIntro.title}
-            intro={whyUsIntro.description}
-            align="center"
-          />
+    <section className="mx-auto max-w-6xl px-6 py-24">
+      <Reveal>
+        <Tag>{whyUsIntro.eyebrow}</Tag>
+        <SectionHeading title={whyUsIntro.title} intro={whyUsIntro.description} className="mt-4" />
+      </Reveal>
+
+      <div className="mt-14 grid items-start gap-12 lg:grid-cols-2">
+        {/* Large title list — hovering or focusing an item swaps the panel */}
+        <Reveal scale>
+          <ul>
+            {whyUs.map((item, i) => (
+              <li key={item.number} className="border-b border-border first:border-t">
+                <button
+                  type="button"
+                  onMouseEnter={() => setActive(i)}
+                  onFocus={() => setActive(i)}
+                  onClick={() => setActive(i)}
+                  aria-current={i === active}
+                  className={cn(
+                    "w-full py-5 text-left font-heading text-2xl font-semibold transition-colors sm:text-3xl",
+                    i === active ? "text-ink" : "text-ink-soft/60 hover:text-ink",
+                  )}
+                >
+                  {item.title}
+                </button>
+              </li>
+            ))}
+          </ul>
         </Reveal>
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {whyUs.map((w, i) => (
-            <Reveal key={w.number} delay={i * 0.06}>
-              <div className="flex h-full flex-col border border-border bg-bg p-8">
-                <div className="flex items-center justify-between">
-                  <span className="flex size-11 items-center justify-center bg-ink text-white">
-                    <Sparkles aria-hidden className="size-5" />
-                  </span>
-                  <span className="font-heading text-lg font-bold text-ink-soft/30">{w.number}</span>
-                </div>
-                <h3 className="mt-6 font-heading text-lg font-semibold text-ink">{w.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{w.description}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+
+        {/* Image + description panel for the active item */}
+        <Reveal delay={0.1} scale>
+          <div className="relative aspect-[4/3] w-full overflow-hidden">
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={current.image}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: reduce ? 0 : 0.3, ease: "easeOut" }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={current.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.p
+              key={current.number}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: reduce ? 0 : 0.3, ease: "easeOut" }}
+              className="mt-6 text-base leading-relaxed text-ink-soft"
+            >
+              {current.description}
+            </motion.p>
+          </AnimatePresence>
+        </Reveal>
       </div>
     </section>
   );

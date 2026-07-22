@@ -1,7 +1,7 @@
 export type Partner = { name: string; initials: string };
 export type CaseStudy = { tag: string; title: string; result: string; image: string };
 export type FounderQuote = { quote: string; name: string; role: string };
-export type WhyItem = { number: string; title: string; description: string };
+export type WhyItem = { number: string; title: string; description: string; image: string };
 export type Post = { date: string; category: string; title: string; excerpt: string; image: string };
 export type Intro = { eyebrow?: string; title: string; description?: string };
 
@@ -62,12 +62,12 @@ export const whyUsIntro: Intro = {
 };
 
 export const whyUs: WhyItem[] = [
-  { number: "01", title: "Senior-led teams", description: "You work directly with experienced engineers and designers, start to finish." },
-  { number: "02", title: "AI where it counts", description: "We add intelligence where it creates real leverage — not as a gimmick." },
-  { number: "03", title: "End-to-end delivery", description: "From first idea to launch and maintenance, one accountable team owns it." },
-  { number: "04", title: "Clear communication", description: "Plain-language updates and a plan you can actually follow." },
-  { number: "05", title: "Built to last", description: "Well-tested, documented codebases you or we can maintain for years." },
-  { number: "06", title: "Outcome focused", description: "We measure success by what your business can do after we ship." },
+  { number: "01", title: "Senior-led teams", description: "You work directly with experienced engineers and designers, start to finish.", image: "/why-team.jpg" },
+  { number: "02", title: "AI where it counts", description: "We add intelligence where it creates real leverage — not as a gimmick.", image: "/svc-ai.jpg" },
+  { number: "03", title: "End-to-end delivery", description: "From first idea to launch and maintenance, one accountable team owns it.", image: "/case-software.jpg" },
+  { number: "04", title: "Clear communication", description: "Plain-language updates and a plan you can actually follow.", image: "/about-office.jpg" },
+  { number: "05", title: "Built to last", description: "Well-tested, documented codebases you or we can maintain for years.", image: "/case-ui.jpg" },
+  { number: "06", title: "Outcome focused", description: "We measure success by what your business can do after we ship.", image: "/svc-data.jpg" },
 ];
 
 export const blogIntro: Intro = {
