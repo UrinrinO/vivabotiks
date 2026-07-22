@@ -20,6 +20,7 @@ export const partners: Partner[] = [
   { name: "VhiNigeria" },
   { name: "Tahci" },
   { name: "OOA & Associates" },
+  { name: "MMY Reality UK" },
 ];
 
 // Solutions drafted from the founder's genericized delivery history — review wording.
