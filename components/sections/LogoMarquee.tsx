@@ -1,18 +1,20 @@
 import { logosIntro, partners } from "@/content/marketing";
 import { Marquee } from "@/components/ui/Marquee";
-import { LogoChip } from "@/components/ui/LogoChip";
 
 export function LogoMarquee() {
   return (
-    <section className="border-y border-border bg-bg py-14">
-      <p className="mx-auto mb-8 max-w-6xl px-6 text-center font-heading text-sm font-medium uppercase tracking-[0.2em] text-ink-soft">
+    <section className="border-y border-border bg-bg py-16">
+      <p className="mx-auto mb-10 max-w-6xl px-6 text-center text-sm text-ink-soft">
         {logosIntro.title}
       </p>
       <Marquee duration={32}>
         {partners.map((p) => (
-          <div key={p.name} className="mx-3">
-            <LogoChip initials={p.initials} name={p.name} />
-          </div>
+          <span
+            key={p.name}
+            className="mx-10 whitespace-nowrap font-heading text-2xl font-semibold text-ink-soft/45"
+          >
+            {p.name}
+          </span>
         ))}
       </Marquee>
     </section>

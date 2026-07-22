@@ -6,7 +6,7 @@ export type Post = { date: string; category: string; title: string; excerpt: str
 export type Intro = { eyebrow?: string; title: string; description?: string };
 
 export const logosIntro: Intro = {
-  title: "Trusted by teams building across industries",
+  title: "Strong partnerships with Vivabotiks",
 };
 
 // PLACEHOLDER partners — replace with real client names/logos before launch.
