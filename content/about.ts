@@ -1,6 +1,5 @@
 // About page copy — company voice, no personal names. Team/lifecycle wording
 // carried over from the previous site (lightly cleaned); review before launch.
-export type Credential = { title: string; detail: string; year?: string };
 export type LifecycleStep = { number: string; title: string; description: string };
 export type TeamCallout = { title: string; description: string };
 
@@ -93,27 +92,4 @@ export const aboutPage = {
     ] satisfies LifecycleStep[],
   },
 
-  credentials: {
-    eyebrow: "Credentials",
-    title: "The record behind the work",
-    items: [
-      {
-        title: "USW-graduate leadership",
-        detail: "Every executive is a University of South Wales graduate",
-      },
-      {
-        title: "Multiple award winners",
-        detail: "Recognised across AI research and industry delivery",
-      },
-      {
-        title: "42+ years of combined experience",
-        detail: "Healthcare, aviation, fintech, and enterprise SaaS",
-      },
-      {
-        title: "NHS Wales research collaboration",
-        detail: "Clinical AI for early COPD detection in primary care",
-        year: "2024",
-      },
-    ] satisfies Credential[],
-  },
 };

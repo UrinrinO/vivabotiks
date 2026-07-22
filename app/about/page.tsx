@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { CaseStudies } from "@/components/sections/CaseStudies";
-import { FinalCta } from "@/components/sections/FinalCta";
 import { LogoMarquee } from "@/components/sections/LogoMarquee";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { PixelDissolve } from "@/components/ui/PixelDissolve";
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const { story, celebrating, imageCta, team, lifecycle, credentials } = aboutPage;
+  const { story, celebrating, imageCta, team, lifecycle } = aboutPage;
   return (
     <main>
       <PageHero title={aboutPage.title} breadcrumb={aboutPage.breadcrumb} />
@@ -163,35 +162,6 @@ export default function AboutPage() {
         </Reveal>
       </section>
 
-      {/* Credentials */}
-      <section>
-        <PixelDissolve />
-        <div className="bg-surface">
-          <div className="mx-auto max-w-6xl px-6 py-24">
-            <Reveal>
-              <Tag>{credentials.eyebrow}</Tag>
-              <SectionHeading title={credentials.title} className="mt-4" />
-            </Reveal>
-            <ul className="mt-12">
-              {credentials.items.map((item) => (
-                <li key={item.title} className="border-b border-border py-6 first:border-t">
-                  <Reveal>
-                    <div className="flex flex-wrap items-baseline justify-between gap-2">
-                      <h3 className="font-heading text-xl font-semibold text-ink">{item.title}</h3>
-                      {item.year && (
-                        <span className="font-heading text-sm text-accent">{item.year}</span>
-                      )}
-                    </div>
-                    <p className="mt-1 text-sm text-ink-soft">{item.detail}</p>
-                  </Reveal>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <FinalCta />
     </main>
   );
 }

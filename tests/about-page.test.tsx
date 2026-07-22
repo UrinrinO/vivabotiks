@@ -28,13 +28,6 @@ describe("About page", () => {
     }
   });
 
-  it("renders every credential", () => {
-    render(<AboutPage />);
-    for (const item of aboutPage.credentials.items) {
-      expect(screen.getByText(item.title)).toBeInTheDocument();
-    }
-  });
-
   it("renders the celebrating stat checks and the image CTA", () => {
     render(<AboutPage />);
     for (const check of aboutPage.celebrating.checks) {
