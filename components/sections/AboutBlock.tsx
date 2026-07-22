@@ -1,46 +1,74 @@
+import Image from "next/image";
 import { Check } from "lucide-react";
 import { about, stats } from "@/content/home";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
+import { Tag } from "@/components/ui/Tag";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { CardVisual } from "@/components/ui/CardVisual";
+import { PixelDissolve } from "@/components/ui/PixelDissolve";
 
 export function AboutBlock() {
   const highlight = stats[1]; // "8+ Years building software" (PLACEHOLDER value)
   return (
-    <section className="border-y border-border bg-surface">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
-        <Reveal className="relative">
-          <CardVisual seed={1} className="h-80 w-full" />
-          <div className="absolute bottom-6 left-6 rounded-2xl border border-border bg-bg px-6 py-4 shadow-sm">
-            <p className="font-heading text-3xl font-bold text-accent">
-              {highlight.value}
-              {highlight.suffix}
-            </p>
-            <p className="mt-1 text-sm text-ink-soft">{highlight.label}</p>
-          </div>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <SectionHeading eyebrow={about.eyebrow} title={about.headline} />
-          <div className="mt-6 space-y-4">
-            {about.paragraphs.map((p) => (
-              <p key={p} className="text-base leading-relaxed text-ink-soft">
-                {p}
+    <section className="border-b border-border">
+      <PixelDissolve />
+      <div className="bg-surface">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
+          <Reveal className="relative" scale>
+            <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
+              <Image
+                src="/about-office.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div className="absolute bottom-6 left-6 rounded-2xl border border-border bg-bg px-6 py-4 shadow-sm">
+              <p className="font-heading text-3xl font-bold text-accent">
+                {highlight.value}
+                {highlight.suffix}
               </p>
-            ))}
-          </div>
-          <ul className="mt-8 space-y-3">
-            {about.checks.map((check) => (
-              <li key={check} className="flex items-center gap-3 text-sm font-medium text-ink">
-                <Check aria-hidden className="size-4 shrink-0 text-accent" />
-                {check}
-              </li>
-            ))}
-          </ul>
-          <Button href={about.cta.href} variant="ghost" className="mt-10">
-            {about.cta.label}
-          </Button>
-        </Reveal>
+              <p className="mt-1 text-sm text-ink-soft">{highlight.label}</p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <Tag>{about.eyebrow}</Tag>
+            <SectionHeading title={about.headline} className="mt-4" />
+            <div className="mt-6 space-y-4">
+              {about.paragraphs.map((p) => (
+                <p key={p} className="text-base leading-relaxed text-ink-soft">
+                  {p}
+                </p>
+              ))}
+            </div>
+            <div
+              aria-hidden
+              className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 font-heading text-3xl font-bold tracking-tight text-ink-soft/40 sm:text-4xl"
+            >
+              {about.motif.map((word, i) => (
+                <span key={word} className="flex items-center gap-x-4">
+                  {i > 0 && <span className="text-accent/30">&middot;</span>}
+                  {word}
+                </span>
+              ))}
+            </div>
+            <ul className="mt-8 space-y-3">
+              {about.checks.map((check) => (
+                <li
+                  key={check}
+                  className="flex items-center gap-3 text-sm font-medium text-ink"
+                >
+                  <Check aria-hidden className="size-4 shrink-0 text-accent" />
+                  {check}
+                </li>
+              ))}
+            </ul>
+            <Button href={about.cta.href} variant="ghost" className="mt-10">
+              {about.cta.label}
+            </Button>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

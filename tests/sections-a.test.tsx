@@ -23,4 +23,9 @@ describe("AboutBlock", () => {
     for (const c of about.checks) expect(screen.getByText(c)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: about.cta.label })).toHaveAttribute("href", about.cta.href);
   });
+
+  it("renders the motif words", () => {
+    render(<AboutBlock />);
+    for (const word of about.motif) expect(screen.getByText(word)).toBeInTheDocument();
+  });
 });
