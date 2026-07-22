@@ -6,7 +6,7 @@ import { siteMeta } from "@/content/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#04131E] text-white">
+    <section className="relative h-svh overflow-hidden bg-[#04131E] text-white">
       {/* Full-bleed robot backdrop, blended into the dark — no card, no border */}
       <div aria-hidden className="absolute inset-y-0 right-0 hidden w-[72%] md:block">
         <Image
@@ -38,7 +38,7 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-20 mx-auto flex min-h-svh max-w-6xl flex-col justify-center px-6 pt-28 pb-60">
+      <div className="relative z-20 mx-auto flex h-full max-w-6xl flex-col justify-center px-6 pt-24 pb-36">
         <div className="max-w-2xl">
           <span className="inline-flex items-center bg-gradient-to-r from-[#3b5bdb] to-[#5a7bff] px-4 py-2 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-white">
             ^Software, reimagined with AI^
@@ -80,7 +80,7 @@ export function Hero() {
       {/* Oversized bright watermark, clipped at the bottom edge like home-two */}
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-[-0.22em] z-10 select-none whitespace-nowrap text-center font-heading text-[20vw] font-bold leading-none text-white/95"
+        className="pointer-events-none absolute inset-x-0 bottom-[-0.22em] z-10 select-none whitespace-nowrap text-center font-heading text-[20vw] font-bold leading-none text-white/10"
       >
         {siteMeta.name}
       </span>
