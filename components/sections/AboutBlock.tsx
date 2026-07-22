@@ -18,7 +18,7 @@ export function AboutBlock() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
           <Reveal className="relative" scale>
             <RevealImage
-              src="/about-office.jpg"
+              src="/assets/about-story.jpg"
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="group aspect-[4/5] w-full"
             />

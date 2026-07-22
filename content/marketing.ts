@@ -36,21 +36,21 @@ export const caseStudies: CaseStudy[] = [
     title: "Clinical-grade intelligence",
     result:
       "LLM care-communication platforms and early-detection models, engineered under NHS-grade data governance with fully anonymised pipelines.",
-    image: "/industry-healthcare.jpg",
+    image: "/assets/industry-healthcare.jpg",
   },
   {
     tag: "Aviation",
     title: "Smart aviation operations",
     result:
       "Demand forecasting, records automation, and compliance systems for aviation supply chains spanning multiple continents.",
-    image: "/industry-aviation.jpg",
+    image: "/assets/industry-aviation.jpg",
   },
   {
     tag: "Fintech",
     title: "Platforms at national scale",
     result:
       "Payment-integrated SaaS and public-sector portals engineered to process thousands of users in a single exercise.",
-    image: "/industry-fintech.jpg",
+    image: "/assets/industry-fintech.jpg",
   },
 ];
 
@@ -70,12 +70,12 @@ export const whyUsIntro: Intro = {
 };
 
 export const whyUs: WhyItem[] = [
-  { number: "01", title: "Founder-led engineering", description: "The director architects, builds, and reviews every project personally. No hand-offs.", image: "/why-team.jpg" },
-  { number: "02", title: "AI that ships", description: "From LLM applications to MLOps platforms: research-grade thinking, production-grade delivery.", image: "/svc-ai.jpg" },
-  { number: "03", title: "Data you can trust", description: "GDPR and NHS-grade governance, anonymisation, and drift monitoring built into every pipeline.", image: "/svc-data.jpg" },
-  { number: "04", title: "End-to-end delivery", description: "From first idea to launch and maintenance, one accountable team owns it.", image: "/case-software.jpg" },
-  { number: "05", title: "Regulated-industry ready", description: "Healthcare, aviation, and fintech delivery, where compliance is the baseline rather than an afterthought.", image: "/about-office.jpg" },
-  { number: "06", title: "Award-winning leadership", description: "Every executive is a USW graduate, with multiple awards between them and over 42 years of combined experience.", image: "/case-ui.jpg" },
+  { number: "01", title: "Founder-led engineering", description: "The director architects, builds, and reviews every project personally. No hand-offs.", image: "/assets/why-founder.jpg" },
+  { number: "02", title: "AI that ships", description: "From LLM applications to MLOps platforms: research-grade thinking, production-grade delivery.", image: "/assets/why-ai-ships.jpg" },
+  { number: "03", title: "Data you can trust", description: "GDPR and NHS-grade governance, anonymisation, and drift monitoring built into every pipeline.", image: "/assets/why-data-trust.jpg" },
+  { number: "04", title: "End-to-end delivery", description: "From first idea to launch and maintenance, one accountable team owns it.", image: "/assets/why-end-to-end.jpg" },
+  { number: "05", title: "Regulated-industry ready", description: "Healthcare, aviation, and fintech delivery, where compliance is the baseline rather than an afterthought.", image: "/assets/why-regulated.jpg" },
+  { number: "06", title: "Award-winning leadership", description: "Every executive is a USW graduate, with multiple awards between them and over 42 years of combined experience.", image: "/assets/why-leadership.jpg" },
 ];
 
 export const blogIntro: Intro = {
@@ -91,7 +91,7 @@ export const posts: Post[] = [
     title: "Hello from Cardiff: introducing Vivabotiks",
     excerpt:
       "Meet Vivabotiks, the living robots company. We engineer machine learning, data platforms, and smart software from the USW Startup Stiwdio in Cardiff, Wales.",
-    image: "/blog-cardiff.jpg",
+    image: "/assets/blog-cardiff.jpg",
   },
   {
     date: "2026-06-15", // PLACEHOLDER date
@@ -99,7 +99,7 @@ export const posts: Post[] = [
     title: "Early-detection AI, from research to the clinic",
     excerpt:
       "What we learned building early-detection models under clinical governance, and why anonymisation-first pipelines are the only way to earn trust in healthcare AI.",
-    image: "/blog-healthcare.jpg",
+    image: "/assets/blog-healthcare.jpg",
   },
   {
     date: "2026-05-28", // PLACEHOLDER date
@@ -107,6 +107,6 @@ export const posts: Post[] = [
     title: "Forecasting that operations teams actually use",
     excerpt:
       "Demand forecasts are only as good as the pipelines beneath them. How real-time ingestion and honest model monitoring turn predictions into decisions.",
-    image: "/blog-forecasting.jpg",
+    image: "/assets/blog-forecasting.jpg",
   },
 ];

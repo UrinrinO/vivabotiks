@@ -11,7 +11,8 @@ describe("CaseStudies", () => {
     for (const c of caseStudies) {
       expect(screen.getByText(c.title)).toBeInTheDocument();
       expect(screen.getByText(c.result)).toBeInTheDocument();
-      const base = c.image.replace(/^\//, "").replace(/\.jpg$/, "");
+      // next/image URL-encodes the path, so match on the filename alone
+      const base = c.image.split("/").pop()!.replace(/\.jpg$/, "");
       expect(imgHtml).toContain(base);
     }
   });

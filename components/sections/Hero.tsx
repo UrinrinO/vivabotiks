@@ -9,7 +9,7 @@ export function Hero() {
       {/* Full-bleed robot backdrop, blended into the dark — no card, no border */}
       <div aria-hidden className="absolute inset-y-0 right-0 hidden w-[72%] md:block">
         <Image
-          src="/hero-robot.jpg"
+          src="/assets/hero-robot.jpg"
           alt=""
           fill
           priority

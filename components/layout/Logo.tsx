@@ -8,7 +8,7 @@ import { cn } from "@/lib/cn";
 export function Logo({ onDark = false, className }: { onDark?: boolean; className?: string }) {
   return (
     <Image
-      src={onDark ? "/logo-white.png" : "/logo.png"}
+      src={onDark ? "/assets/logo-white.png" : "/assets/logo.png"}
       alt="Vivabotiks"
       width={540}
       height={220}
