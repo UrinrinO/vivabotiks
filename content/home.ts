@@ -26,7 +26,7 @@ export const services: Service[] = [
       "Production LLM applications and end-to-end ML platforms, from experiment tracking and model serving to drift detection. Built responsibly under GDPR-grade governance.",
     href: "/services",
     bullets: ["LLM apps, RAG & fine-tuning", "MLOps platforms end to end", "Responsible AI & data governance"],
-    image: "/svc-ai.jpg",
+    image: "/service-ai.jpg",
   },
   {
     number: "02",
@@ -35,7 +35,7 @@ export const services: Service[] = [
       "Streaming ingestion, real-time feature pipelines, and forecasting systems that turn raw operational data into decisions your team can act on.",
     href: "/services",
     bullets: ["Real-time data pipelines", "Forecasting & analytics", "Cloud data platforms"],
-    image: "/svc-data.jpg",
+    image: "/service-data.jpg",
   },
   {
     number: "03",
@@ -44,7 +44,7 @@ export const services: Service[] = [
       "Web and mobile products engineered end to end: architecture, build, test, launch, and the cloud DevOps to run them reliably in production.",
     href: "/services",
     bullets: ["Web & mobile apps", "APIs & integrations", "Cloud-native DevOps"],
-    image: "/svc-software.jpg",
+    image: "/service-software.jpg",
   },
   {
     number: "04",
@@ -53,7 +53,7 @@ export const services: Service[] = [
       "Living up to our name: intelligence connected to the physical world. Sensor data platforms, connected devices, and the smart systems that run on them.",
     href: "/services",
     bullets: ["Connected devices", "Sensor data platforms", "Edge intelligence"],
-    image: "/svc-3d.jpg",
+    image: "/service-iot.jpg",
   },
 ];
 

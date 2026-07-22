@@ -36,21 +36,21 @@ export const caseStudies: CaseStudy[] = [
     title: "Clinical-grade intelligence",
     result:
       "LLM care-communication platforms and early-detection models, engineered under NHS-grade data governance with fully anonymised pipelines.",
-    image: "/case-ui.jpg",
+    image: "/industry-healthcare.jpg",
   },
   {
     tag: "Aviation",
     title: "Smart aviation operations",
     result:
       "Demand forecasting, records automation, and compliance systems for aviation supply chains spanning multiple continents.",
-    image: "/case-software.jpg",
+    image: "/industry-aviation.jpg",
   },
   {
     tag: "Fintech",
     title: "Platforms at national scale",
     result:
       "Payment-integrated SaaS and public-sector portals engineered to process thousands of users in a single exercise.",
-    image: "/case-coding.jpg",
+    image: "/industry-fintech.jpg",
   },
 ];
 
@@ -91,7 +91,7 @@ export const posts: Post[] = [
     title: "Hello from Cardiff: introducing Vivabotiks",
     excerpt:
       "Meet Vivabotiks, the living robots company. We engineer machine learning, data platforms, and smart software from the USW Startup Stiwdio in Cardiff, Wales.",
-    image: "/article.jpg",
+    image: "/blog-cardiff.jpg",
   },
   {
     date: "2026-06-15", // PLACEHOLDER date
@@ -99,7 +99,7 @@ export const posts: Post[] = [
     title: "Early-detection AI, from research to the clinic",
     excerpt:
       "What we learned building early-detection models under clinical governance, and why anonymisation-first pipelines are the only way to earn trust in healthcare AI.",
-    image: "/case-ui.jpg",
+    image: "/blog-healthcare.jpg",
   },
   {
     date: "2026-05-28", // PLACEHOLDER date
@@ -107,6 +107,6 @@ export const posts: Post[] = [
     title: "Forecasting that operations teams actually use",
     excerpt:
       "Demand forecasts are only as good as the pipelines beneath them. How real-time ingestion and honest model monitoring turn predictions into decisions.",
-    image: "/svc-data.jpg",
+    image: "/blog-forecasting.jpg",
   },
 ];
