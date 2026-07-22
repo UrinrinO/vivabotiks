@@ -1,5 +1,5 @@
 export type Partner = { name: string; initials: string };
-export type CaseStudy = { tag: string; title: string; result: string };
+export type CaseStudy = { tag: string; title: string; result: string; image: string };
 export type FounderQuote = { quote: string; name: string; role: string };
 export type Award = { number: string; title: string; issuer: string; year: string };
 export type WhyItem = { number: string; title: string; description: string };
@@ -41,16 +41,19 @@ export const caseStudies: CaseStudy[] = [
     tag: "Automation",
     title: "Support triage assistant",
     result: "Cut first-response time by an estimated 60% with an AI triage layer.",
+    image: "/case-ui.jpg",
   },
   {
     tag: "Analytics",
     title: "Revenue forecasting dashboard",
     result: "Unified five data sources into one live forecast for the leadership team.",
+    image: "/case-software.jpg",
   },
   {
     tag: "Product",
     title: "Field-ops mobile app",
     result: "Shipped an offline-first app used daily by distributed field teams.",
+    image: "/case-coding.jpg",
   },
 ];
 

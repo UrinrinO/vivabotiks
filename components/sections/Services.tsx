@@ -17,7 +17,7 @@ export function Services() {
       </Reveal>
       <div className="mt-14 grid gap-6 sm:grid-cols-2">
         {services.map((service, i) => (
-          <Reveal key={service.number} delay={i * 0.08}>
+          <Reveal key={service.number} delay={i * 0.08} scale>
             <Link
               href={service.href}
               className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-sm"
@@ -36,7 +36,7 @@ export function Services() {
               </div>
               <div className="flex flex-1 flex-col p-8">
                 <h3 className="font-heading text-xl font-semibold text-ink">{service.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{service.description}</p>
+                <p className="mt-4 border-t border-border pt-4 text-sm leading-relaxed text-ink-soft">{service.description}</p>
                 <ul className="mt-5 flex-1 space-y-2">
                   {service.bullets.map((b) => (
                     <li key={b} className="flex items-center gap-2 text-sm text-ink-soft">
