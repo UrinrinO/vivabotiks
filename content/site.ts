@@ -17,9 +17,6 @@ export const navLinks: NavLink[] = [
 
 export const navCta = { label: "Get in touch", href: "/contact" };
 
-// Google Form the contact page links out to (from the previous site).
-export const contactFormUrl = "https://forms.gle/i1QK6pVN63NJCPF87";
-
 // Footer recreates the previous site's footer: big headline with an amber
 // highlight, the six service links, and the email/address/phone columns.
 export const footerContent = {

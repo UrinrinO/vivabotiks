@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import ContactPage from "@/app/contact/page";
 import { contactPage } from "@/content/contact";
-import { contactFormUrl, footerContent } from "@/content/site";
+import { footerContent } from "@/content/site";
 
 describe("Contact page", () => {
   it("renders the page title and contact details", () => {
@@ -17,11 +17,13 @@ describe("Contact page", () => {
     }
   });
 
-  it("links out to the project form in a new tab", () => {
+  it("renders the contact form fields and submit button", () => {
     render(<ContactPage />);
-    const link = screen.getByRole("link", { name: contactPage.form.label });
-    expect(link).toHaveAttribute("href", contactFormUrl);
-    expect(link).toHaveAttribute("target", "_blank");
-    expect(link).toHaveAttribute("rel", "noopener");
+    expect(screen.getByLabelText(contactPage.form.nameLabel)).toBeInTheDocument();
+    expect(screen.getByLabelText(contactPage.form.emailLabel)).toBeInTheDocument();
+    expect(screen.getByLabelText(contactPage.form.messageLabel)).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: contactPage.form.submitLabel }),
+    ).toBeInTheDocument();
   });
 });

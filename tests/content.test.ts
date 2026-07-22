@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { navLinks, navCta, footerContent, siteMeta, contactFormUrl } from "@/content/site";
+import { navLinks, navCta, footerContent, siteMeta } from "@/content/site";
 import { services, about, stats, finalCta } from "@/content/home";
 
 describe("content shape", () => {
@@ -21,8 +21,5 @@ describe("content shape", () => {
     expect(footerContent.contact.addressLines.length).toBeGreaterThan(0);
     expect(footerContent.headline.highlight.length).toBeGreaterThan(0);
     expect(siteMeta.name).toBe("Vivabotiks");
-  });
-  it("has a contact form URL", () => {
-    expect(contactFormUrl).toMatch(/^https:\/\//);
   });
 });

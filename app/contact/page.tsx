@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Tag } from "@/components/ui/Tag";
 import { contactPage } from "@/content/contact";
-import { contactFormUrl, footerContent } from "@/content/site";
+import { footerContent } from "@/content/site";
 
 export const metadata: Metadata = {
   title: contactPage.metaTitle,
@@ -68,14 +69,9 @@ export default function ContactPage() {
         <Reveal delay={0.1}>
           <div className="border border-border bg-surface p-10">
             <p className="text-base leading-relaxed text-ink-soft">{form.lead}</p>
-            <a
-              href={contactFormUrl}
-              target="_blank"
-              rel="noopener"
-              className="mt-8 inline-flex items-center gap-2 bg-ink px-6 py-3 font-heading text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-ink/90"
-            >
-              {form.label}
-            </a>
+            <div className="mt-8">
+              <ContactForm />
+            </div>
             <p className="mt-6 border-t border-border pt-6 text-sm text-ink-soft">
               {form.emailLead}{" "}
               <a href={`mailto:${contact.email}`} className="text-accent hover:underline">
