@@ -28,13 +28,16 @@ describe("About page", () => {
     }
   });
 
-  it("renders the celebrating stat checks and the image CTA", () => {
+  it("renders the celebrating stat checks and the closing band", () => {
     render(<AboutPage />);
     for (const check of aboutPage.celebrating.checks) {
       expect(screen.getByText(check)).toBeInTheDocument();
     }
-    // The same label also appears in the final CTA, so match across all of them.
-    const links = screen.getAllByRole("link", { name: aboutPage.imageCta.label });
-    expect(links.some((l) => l.getAttribute("href") === aboutPage.imageCta.href)).toBe(true);
+    expect(screen.getByRole("heading", { name: aboutPage.closing.title })).toBeInTheDocument();
+    expect(screen.getByText(aboutPage.closing.paragraph)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: aboutPage.closing.cta.label })).toHaveAttribute(
+      "href",
+      aboutPage.closing.cta.href,
+    );
   });
 });

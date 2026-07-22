@@ -3,7 +3,19 @@ import { finalCta } from "@/content/home";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 
-export function FinalCta() {
+type FinalCtaProps = {
+  headline?: string;
+  subline?: string;
+  cta?: { label: string; href: string };
+};
+
+// Defaults to the home-page closing content; pages can pass their own copy
+// while keeping the same dark band treatment.
+export function FinalCta({
+  headline = finalCta.headline,
+  subline = finalCta.subline,
+  cta = finalCta.cta,
+}: FinalCtaProps = {}) {
   return (
     <section className="relative overflow-hidden bg-[#04131E] text-white">
       {/* Barely-there grid, echoing the hero and footer texture */}
@@ -41,13 +53,13 @@ export function FinalCta() {
       />
 
       <Reveal className="relative z-10 mx-auto max-w-3xl px-6 py-28 text-center">
-        <h2 className="font-heading text-4xl font-semibold text-white sm:text-5xl">{finalCta.headline}</h2>
-        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/70">{finalCta.subline}</p>
+        <h2 className="font-heading text-4xl font-semibold text-white sm:text-5xl">{headline}</h2>
+        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/70">{subline}</p>
 
         {/* Flat glass widget holding the call to action */}
         <div className="mx-auto mt-10 flex max-w-md flex-col items-center gap-6 border border-white/10 bg-white/[0.07] p-8 backdrop-blur-md">
-          <Button href={finalCta.cta.href} className="bg-white text-ink hover:bg-white/90">
-            {finalCta.cta.label}
+          <Button href={cta.href} className="bg-white text-ink hover:bg-white/90">
+            {cta.label}
           </Button>
         </div>
       </Reveal>

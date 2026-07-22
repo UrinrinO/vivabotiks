@@ -32,11 +32,12 @@ export const aboutPage = {
     ],
   },
 
-  imageCta: {
-    title: "Let's transform how your business works", // PLACEHOLDER — review wording
-    label: "Start your project",
-    href: "/contact",
-    image: "/svc-3d.jpg",
+  closing: {
+    title: "Let's transform how your business works",
+    // PLACEHOLDER — review wording
+    paragraph:
+      "Bring us the process that slows your team down, or the idea you have not had time to build. We will scope it together, design the right system, and ship software that earns its keep.",
+    cta: { label: "Start your project", href: "/contact" },
   },
 
   team: {
