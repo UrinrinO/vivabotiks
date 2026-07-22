@@ -38,7 +38,7 @@ export default function AboutPage() {
         </Reveal>
         <Reveal delay={0.1} scale className="group">
           <RevealImage
-            src="/assets/about-story.jpg"
+            src="/assets/about-team.jpg"
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="aspect-[4/3] w-full"
           />

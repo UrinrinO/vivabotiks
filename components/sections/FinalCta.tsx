@@ -29,9 +29,9 @@ export function FinalCta({
         }}
       />
 
-      {/* Robot backdrop on the right, melted into the dark like the hero */}
+      {/* Closing-band backdrop on the right, melted into the dark like the hero */}
       <div aria-hidden className="absolute inset-y-0 right-0 hidden w-[60%] opacity-70 lg:block">
-        <Image src="/assets/hero-robot.jpg" alt="" fill sizes="60vw" className="object-cover object-[68%_22%]" />
+        <Image src="/assets/band-closing.jpg" alt="" fill sizes="60vw" className="object-cover object-[70%_45%]" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#04131E] via-[#04131E]/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#04131E] via-transparent to-[#04131E]/25" />
       </div>
