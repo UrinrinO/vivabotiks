@@ -12,7 +12,8 @@ export function AboutBlock() {
   const highlight = stats[1]; // "8+ Years building software" (PLACEHOLDER value)
   return (
     <section className="border-b border-border">
-      <PixelDissolve />
+      {/* Untinted cells carry the ice blue down from the services section */}
+      <PixelDissolve from="var(--color-ice)" />
       <div className="bg-surface">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
           <Reveal className="relative" scale>
