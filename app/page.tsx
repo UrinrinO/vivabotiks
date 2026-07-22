@@ -5,7 +5,6 @@ import { LogoMarquee } from "@/components/sections/LogoMarquee";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { TextMarquee } from "@/components/sections/TextMarquee";
 import { StatsQuote } from "@/components/sections/StatsQuote";
-import { Awards } from "@/components/sections/Awards";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Blog } from "@/components/sections/Blog";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -20,7 +19,6 @@ export default function Home() {
       <CaseStudies />
       <TextMarquee />
       <StatsQuote />
-      <Awards />
       <WhyUs />
       <Blog />
       <FinalCta />

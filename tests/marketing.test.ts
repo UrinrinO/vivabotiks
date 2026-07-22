@@ -1,11 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { partners, caseStudies, founderQuote, awards, whyUs, posts } from "@/content/marketing";
+import { partners, caseStudies, founderQuote, whyUs, posts } from "@/content/marketing";
 
 describe("marketing content", () => {
   it("has the expected counts", () => {
     expect(partners).toHaveLength(6);
     expect(caseStudies).toHaveLength(3);
-    expect(awards).toHaveLength(4);
     expect(whyUs).toHaveLength(6);
     expect(posts).toHaveLength(3);
   });

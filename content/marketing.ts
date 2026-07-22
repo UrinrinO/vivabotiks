@@ -1,7 +1,6 @@
 export type Partner = { name: string; initials: string };
 export type CaseStudy = { tag: string; title: string; result: string; image: string };
 export type FounderQuote = { quote: string; name: string; role: string };
-export type Award = { number: string; title: string; issuer: string; year: string };
 export type WhyItem = { number: string; title: string; description: string };
 export type Post = { date: string; category: string; title: string; excerpt: string; image: string };
 export type Intro = { eyebrow?: string; title: string; description?: string };
@@ -55,19 +54,6 @@ export const founderQuote: FounderQuote = {
   name: "Founder Name",
   role: "Founder & CEO, Vivabotiks",
 };
-
-export const awardsIntro: Intro = {
-  eyebrow: "Recognition",
-  title: "Where our work gets noticed",
-};
-
-// PLACEHOLDER awards — replace with real recognitions before launch.
-export const awards: Award[] = [
-  { number: "//01", title: "Top Software Partner", issuer: "Placeholder Awards", year: "2025" },
-  { number: "//02", title: "AI Innovation Finalist", issuer: "Placeholder Summit", year: "2025" },
-  { number: "//03", title: "Best Product Design", issuer: "Placeholder Guild", year: "2024" },
-  { number: "//04", title: "Rising Studio", issuer: "Placeholder Review", year: "2024" },
-];
 
 export const whyUsIntro: Intro = {
   eyebrow: "Why Vivabotiks",
