@@ -34,4 +34,14 @@ describe("About page", () => {
       expect(screen.getByText(item.title)).toBeInTheDocument();
     }
   });
+
+  it("renders the celebrating stat checks and the image CTA", () => {
+    render(<AboutPage />);
+    for (const check of aboutPage.celebrating.checks) {
+      expect(screen.getByText(check)).toBeInTheDocument();
+    }
+    // The same label also appears in the final CTA, so match across all of them.
+    const links = screen.getAllByRole("link", { name: aboutPage.imageCta.label });
+    expect(links.some((l) => l.getAttribute("href") === aboutPage.imageCta.href)).toBe(true);
+  });
 });

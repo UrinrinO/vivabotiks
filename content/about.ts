@@ -20,6 +20,26 @@ export const aboutPage = {
     ],
   },
 
+  celebrating: {
+    eyebrow: "Celebrating",
+    stat: { value: 42, suffix: "+", label: "years of combined leadership experience" },
+    paragraph:
+      "We build AI-powered systems that streamline operations and unlock growth: machine-learning platforms, data pipelines, and the production software around them. Engineered for organisations that need results they can trust.",
+    checks: [
+      "LLM and machine-learning platforms",
+      "Real-time data pipelines",
+      "Cloud-native software and DevOps",
+      "Connected devices and robotics",
+    ],
+  },
+
+  imageCta: {
+    title: "Let's transform how your business works", // PLACEHOLDER — review wording
+    label: "Start your project",
+    href: "/contact",
+    image: "/svc-3d.jpg",
+  },
+
   team: {
     eyebrow: "The team",
     title: "Skilled professionals with vast experience",

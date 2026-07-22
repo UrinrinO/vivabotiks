@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { Check } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
+import { CaseStudies } from "@/components/sections/CaseStudies";
 import { FinalCta } from "@/components/sections/FinalCta";
+import { LogoMarquee } from "@/components/sections/LogoMarquee";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { PixelDissolve } from "@/components/ui/PixelDissolve";
 import { Reveal } from "@/components/ui/Reveal";
 import { RevealImage } from "@/components/ui/RevealImage";
@@ -15,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const { story, team, lifecycle, credentials } = aboutPage;
+  const { story, celebrating, imageCta, team, lifecycle, credentials } = aboutPage;
   return (
     <main>
       <PageHero title={aboutPage.title} breadcrumb={aboutPage.breadcrumb} />
@@ -42,9 +47,37 @@ export default function AboutPage() {
         </Reveal>
       </section>
 
+      {/* Celebrating */}
+      <section className="bg-ice">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 lg:grid-cols-2">
+          <Reveal>
+            <Tag>{celebrating.eyebrow}</Tag>
+            <div className="mt-6 flex items-center gap-6">
+              <p className="font-heading text-7xl font-bold text-ink">
+                <AnimatedCounter value={celebrating.stat.value} suffix={celebrating.stat.suffix} />
+              </p>
+              <p className="max-w-[14rem] border-l border-border pl-6 text-base text-ink-soft">
+                {celebrating.stat.label}
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-base leading-relaxed text-ink-soft">{celebrating.paragraph}</p>
+            <ul className="mt-6 space-y-3">
+              {celebrating.checks.map((check) => (
+                <li key={check} className="flex items-center gap-3 text-sm font-medium text-ink">
+                  <Check aria-hidden className="size-4 shrink-0 text-accent" />
+                  {check}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Team */}
       <section>
-        <PixelDissolve />
+        <PixelDissolve from="var(--color-ice)" />
         <div className="bg-surface">
           <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 lg:grid-cols-2">
             <Reveal>
@@ -76,6 +109,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <LogoMarquee />
+
       {/* Lifecycle */}
       <section className="mx-auto max-w-6xl px-6 py-24">
         <Reveal>
@@ -101,6 +136,31 @@ export default function AboutPage() {
             </Reveal>
           ))}
         </ol>
+      </section>
+
+      <CaseStudies />
+
+      {/* Full-bleed image band with a single call to action */}
+      <section className="relative flex h-96 items-center justify-center overflow-hidden">
+        <Image
+          src={imageCta.image}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-ink/70" />
+        <Reveal className="relative z-10 px-6 text-center">
+          <h2 className="font-heading text-3xl font-semibold text-white sm:text-4xl">
+            {imageCta.title}
+          </h2>
+          <Link
+            href={imageCta.href}
+            className="mt-8 inline-flex items-center gap-2 bg-white px-6 py-3 font-heading text-sm font-medium text-ink transition-transform duration-300 hover:-translate-y-0.5"
+          >
+            {imageCta.label}
+          </Link>
+        </Reveal>
       </section>
 
       {/* Credentials */}
