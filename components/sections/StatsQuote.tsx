@@ -20,7 +20,7 @@ export function StatsQuote() {
         aria-hidden
         className="pointer-events-none absolute right-[-8rem] top-0 size-[32rem] rounded-full bg-[#2f56ff]/20 blur-[120px]"
       />
-      <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center">
+      <div className="relative mx-auto grid max-w-6xl gap-16 px-6 py-36 lg:grid-cols-2 lg:items-center">
         <Reveal>
           <div className="grid grid-cols-2 gap-8">
             {stats.map((stat) => (
