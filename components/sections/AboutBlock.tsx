@@ -18,14 +18,16 @@ export function AboutBlock() {
             <RevealImage
               src="/about-office.jpg"
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="group aspect-[4/3] w-full"
+              className="group aspect-[4/5] w-full"
             />
-            <div className="absolute bottom-6 left-6 border border-border bg-bg px-6 py-4 shadow-sm">
-              <p className="font-heading text-3xl font-bold text-accent">
+            {/* Dark stat panel overlapping the photo's lower-right */}
+            <div className="absolute -bottom-8 right-0 w-[72%] max-w-sm bg-ink p-8 text-white sm:w-[60%]">
+              <p className="font-heading text-5xl font-bold">
                 {highlight.value}
                 {highlight.suffix}
               </p>
-              <p className="mt-1 text-sm text-ink-soft">{highlight.label}</p>
+              <p className="mt-4 font-semibold">{highlight.label}</p>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">{about.statBlurb}</p>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
@@ -60,7 +62,7 @@ export function AboutBlock() {
                 </li>
               ))}
             </ul>
-            <Button href={about.cta.href} variant="ghost" className="mt-10">
+            <Button href={about.cta.href} star className="mt-10">
               {about.cta.label}
             </Button>
           </Reveal>

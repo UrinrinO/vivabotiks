@@ -66,6 +66,9 @@ export const about = {
     "Our team has a wide range of skills and experience, and we are always looking for new challenges. We are committed to providing the best possible service to our clients, and we believe that our work should speak for itself.",
   ],
   motif: ["Idea", "Think", "Create"],
+  // Shown inside the dark stat panel over the photo (sentence from the old site's about copy).
+  statBlurb:
+    "Our team has a wide range of skills and experience, and we are always looking for new challenges.",
   checks: [
     "Experienced, senior-led team",
     "End-to-end delivery, from idea to launch",
