@@ -10,10 +10,6 @@ describe("ui primitives", () => {
     render(<Button href="/contact">Go</Button>);
     expect(screen.getByRole("link", { name: "Go" })).toHaveAttribute("href", "/contact");
   });
-  it("Button with star still exposes an accessible name", () => {
-    render(<Button href="/x" star>Launch</Button>);
-    expect(screen.getByRole("link", { name: "Launch" })).toBeInTheDocument();
-  });
   it("SectionHeading renders eyebrow and title", () => {
     render(<SectionHeading eyebrow="Eyebrow" title="Big Title" />);
     expect(screen.getByText("Eyebrow")).toBeInTheDocument();

@@ -1,16 +1,14 @@
 import Link from "next/link";
-import { Star } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 type ButtonProps = {
   href: string;
   variant?: "primary" | "ghost";
-  star?: boolean;
   children: React.ReactNode;
   className?: string;
 };
 
-export function Button({ href, variant = "primary", star = false, children, className }: ButtonProps) {
+export function Button({ href, variant = "primary", children, className }: ButtonProps) {
   return (
     <Link
       href={href}
@@ -21,7 +19,6 @@ export function Button({ href, variant = "primary", star = false, children, clas
         className,
       )}
     >
-      {star && <Star aria-hidden className="size-4 fill-accent-bright text-accent-bright" />}
       {children}
     </Link>
   );

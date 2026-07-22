@@ -62,7 +62,7 @@ export function AboutBlock() {
                 </li>
               ))}
             </ul>
-            <Button href={about.cta.href} star className="mt-10">
+            <Button href={about.cta.href} className="mt-10">
               {about.cta.label}
             </Button>
           </Reveal>

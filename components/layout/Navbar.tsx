@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
-import { ChevronDown, Menu, Star, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { navCta, navLinks } from "@/content/site";
 import { cn } from "@/lib/cn";
 import { Logo } from "@/components/layout/Logo";
@@ -69,7 +69,6 @@ export function Navbar() {
               overHero ? "bg-white text-ink hover:bg-white/90" : "bg-ink text-white hover:bg-ink/90",
             )}
           >
-            <Star aria-hidden className="size-4 fill-accent text-accent" />
             {navCta.label}
           </Link>
           <button
@@ -116,7 +115,6 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className="mt-6 inline-flex w-fit items-center gap-2 bg-ink px-6 py-3 font-heading text-sm font-medium text-white"
             >
-              <Star aria-hidden className="size-4 fill-accent-bright text-accent-bright" />
               {navCta.label}
             </Link>
           </motion.nav>

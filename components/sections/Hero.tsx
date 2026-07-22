@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Star } from "lucide-react";
 import { hero } from "@/content/home";
 import { siteMeta } from "@/content/site";
 
@@ -52,7 +51,6 @@ export function Hero() {
               href={hero.primaryCta.href}
               className="inline-flex items-center gap-2 bg-white px-6 py-3 font-heading text-sm font-medium text-ink transition-transform duration-300 hover:-translate-y-0.5"
             >
-              <Star aria-hidden className="size-4 fill-accent text-accent" />
               {hero.primaryCta.label}
             </Link>
             <Link
