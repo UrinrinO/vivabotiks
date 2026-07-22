@@ -10,9 +10,9 @@ describe("marketing content", () => {
   });
   it("each post has a real title, date, and image asset", () => {
     expect(posts.map((p) => p.title)).toEqual([
-      "Cloud computing & Cybersecurity",
-      "Web development in Nigeria",
-      "Business and Innovation",
+      "Vivabotiks is now registered in Wales",
+      "Early-detection AI, from research to the clinic",
+      "Forecasting that operations teams actually use",
     ]);
     for (const p of posts) {
       expect(p.date).toMatch(/^\d{4}-\d{2}-\d{2}$/);

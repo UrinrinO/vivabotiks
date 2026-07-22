@@ -19,30 +19,34 @@ export const partners: Partner[] = [
   { name: "Orbit Logistics", initials: "OL" },
 ];
 
+// Solutions drafted from the founder's genericized delivery history — review wording.
 export const caseStudiesIntro: Intro = {
-  eyebrow: "Selected work",
-  title: "Products we've shipped",
-  description: "A snapshot of the outcomes we build for. Full case studies are on the way.",
+  eyebrow: "Industry solutions",
+  title: "Proven in regulated industries",
+  description:
+    "Intelligent systems delivered where the stakes are highest — healthcare, aviation, and financial services.",
 };
 
-// PLACEHOLDER case studies — replace with real projects before launch.
 export const caseStudies: CaseStudy[] = [
   {
-    tag: "Automation",
-    title: "Support triage assistant",
-    result: "Cut first-response time by an estimated 60% with an AI triage layer.",
+    tag: "Healthcare AI",
+    title: "Clinical-grade intelligence",
+    result:
+      "LLM care-communication platforms and early-detection models, engineered under NHS-grade data governance with fully anonymised pipelines.",
     image: "/case-ui.jpg",
   },
   {
-    tag: "Analytics",
-    title: "Revenue forecasting dashboard",
-    result: "Unified five data sources into one live forecast for the leadership team.",
+    tag: "Aviation",
+    title: "Smart aviation operations",
+    result:
+      "Demand forecasting, records automation, and compliance systems for aviation supply chains spanning multiple continents.",
     image: "/case-software.jpg",
   },
   {
-    tag: "Product",
-    title: "Field-ops mobile app",
-    result: "Shipped an offline-first app used daily by distributed field teams.",
+    tag: "Fintech",
+    title: "Platforms at national scale",
+    result:
+      "Payment-integrated SaaS and public-sector portals engineered to process thousands of users in a single exercise.",
     image: "/case-coding.jpg",
   },
 ];
@@ -50,24 +54,25 @@ export const caseStudies: CaseStudy[] = [
 // Quote wording is PLACEHOLDER — replace with Uri's real statement before launch.
 export const founderQuote: FounderQuote = {
   quote:
-    "We started Vivabotiks to make serious software feel within reach — pairing senior engineering with AI so smaller teams can ship like big ones.",
+    "Vivabotiks means living robots — software that learns, adapts, and quietly does the heavy lifting. That's the standard every system we ship is held to.",
   name: "Uri",
   role: "Founder & CEO, Vivabotiks",
 };
 
+// Why-us copy drafted from the founder's practice — review wording.
 export const whyUsIntro: Intro = {
   eyebrow: "Why Vivabotiks",
   title: "What working with us feels like",
-  description: "Senior-led delivery, AI where it earns its place, and no hand-offs to junior teams.",
+  description: "Founder-led delivery, AI where it earns its place, and no hand-offs to junior teams.",
 };
 
 export const whyUs: WhyItem[] = [
-  { number: "01", title: "Senior-led teams", description: "You work directly with experienced engineers and designers, start to finish.", image: "/why-team.jpg" },
-  { number: "02", title: "AI where it counts", description: "We add intelligence where it creates real leverage — not as a gimmick.", image: "/svc-ai.jpg" },
-  { number: "03", title: "End-to-end delivery", description: "From first idea to launch and maintenance, one accountable team owns it.", image: "/case-software.jpg" },
-  { number: "04", title: "Clear communication", description: "Plain-language updates and a plan you can actually follow.", image: "/about-office.jpg" },
-  { number: "05", title: "Built to last", description: "Well-tested, documented codebases you or we can maintain for years.", image: "/case-ui.jpg" },
-  { number: "06", title: "Outcome focused", description: "We measure success by what your business can do after we ship.", image: "/svc-data.jpg" },
+  { number: "01", title: "Founder-led engineering", description: "The director architects, builds, and reviews every project personally — no hand-offs.", image: "/why-team.jpg" },
+  { number: "02", title: "AI that ships", description: "From LLM applications to MLOps platforms — research-grade thinking, production-grade delivery.", image: "/svc-ai.jpg" },
+  { number: "03", title: "Data you can trust", description: "GDPR and NHS-grade governance, anonymisation, and drift monitoring built into every pipeline.", image: "/svc-data.jpg" },
+  { number: "04", title: "End-to-end delivery", description: "From first idea to launch and maintenance, one accountable team owns it.", image: "/case-software.jpg" },
+  { number: "05", title: "Regulated-industry ready", description: "Healthcare, aviation, and fintech delivery — where compliance is the baseline, not an afterthought.", image: "/about-office.jpg" },
+  { number: "06", title: "Award-winning expertise", description: "Award-winning AI research at the helm, with award-winning executives joining the leadership.", image: "/case-ui.jpg" },
 ];
 
 export const blogIntro: Intro = {
@@ -75,31 +80,30 @@ export const blogIntro: Intro = {
   title: "Articles From Our Team",
 };
 
-// Titles, excerpts, and dates are the real articles from the previous site.
-// `category` labels are invented — the old site had no post categories. PLACEHOLDER
+// New UK-era articles — drafts; review wording and confirm dates before launch.
 export const posts: Post[] = [
   {
-    date: "2024-02-23",
-    category: "Security", // PLACEHOLDER
-    title: "Cloud computing & Cybersecurity",
+    date: "2026-07-01", // PLACEHOLDER date
+    category: "News",
+    title: "Vivabotiks is now registered in Wales",
     excerpt:
-      "As more and more businesses move to the cloud, it's important to understand the potential cybersecurity threats that come with this transition...",
+      "We've made it official: Vivabotiks Ltd is now a UK company, building from the USW Startup Stiwdio in Cardiff — bringing AI-smart software to businesses across the UK and beyond.",
     image: "/article.jpg",
   },
   {
-    date: "2020-01-21",
-    category: "Engineering", // PLACEHOLDER
-    title: "Web development in Nigeria",
+    date: "2026-06-15", // PLACEHOLDER date
+    category: "Healthcare AI",
+    title: "Early-detection AI, from research to the clinic",
     excerpt:
-      "In today's competitive business environment, it is important to hire the right web developers. The quality of the web developers...",
-    image: "/svc-software.jpg",
+      "What we learned building early-detection models under clinical governance — and why anonymisation-first pipelines are the only way to earn trust in healthcare AI.",
+    image: "/case-ui.jpg",
   },
   {
-    date: "2022-05-19",
-    category: "Business", // PLACEHOLDER
-    title: "Business and Innovation",
+    date: "2026-05-28", // PLACEHOLDER date
+    category: "Data Engineering",
+    title: "Forecasting that operations teams actually use",
     excerpt:
-      "The benefits of software engineering are many and varied. Perhaps the most significant benefit is that it can help businesses achieve their goals...",
-    image: "/svc-ai.jpg",
+      "Demand forecasts are only as good as the pipelines beneath them. How real-time ingestion and honest model monitoring turn predictions into decisions.",
+    image: "/svc-data.jpg",
   },
 ];

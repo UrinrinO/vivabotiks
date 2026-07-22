@@ -4,7 +4,7 @@ export const siteMeta = {
   name: "Vivabotiks",
   title: "Vivabotiks — AI-Powered Software Company",
   description:
-    "Vivabotiks builds intelligent software: AI & automation, custom development, data analytics, and 3D design for ambitious businesses.",
+    "Vivabotiks — living robots — is a Welsh AI software company: machine learning, data engineering, software development, and IoT & robotics for healthcare, aviation, and fintech.",
   url: "https://vivabotiks.co.uk", // PLACEHOLDER — confirm production domain before launch
 };
 
@@ -26,12 +26,12 @@ export const contactFormUrl = "https://forms.gle/i1QK6pVN63NJCPF87";
 export const footerContent = {
   headline: { pre: "Best", highlight: "Software Agency", post: "for Your Project" },
   services: [
-    "Web Development",
-    "Mobile App Development",
-    "Data Analytics & IOT",
-    "Enterprise Solutions",
-    "UI/UX Designs",
-    "3D Designs & Animation",
+    "AI & Machine Learning",
+    "Data Engineering",
+    "Software Development",
+    "IoT & Robotics",
+    "Healthcare AI",
+    "Aviation & Fintech Solutions",
   ],
   contact: {
     email: "info@vivabotiks.co.uk",
