@@ -8,8 +8,18 @@ import { footerContent } from "@/content/site";
 export function Footer() {
   const { headline, services, contact, copyrightName } = footerContent;
   return (
-    <footer className="fixed inset-x-0 bottom-0 z-0 flex h-svh flex-col justify-between overflow-y-auto bg-ink text-white">
-      <div className="mx-auto grid w-full max-w-6xl flex-1 items-center gap-12 px-6 pt-28 lg:grid-cols-[3fr_2fr]">
+    <footer className="fixed inset-x-0 bottom-0 z-0 flex h-svh flex-col justify-between overflow-y-auto bg-[#04131E] text-white">
+      {/* Barely-there grid, echoing the hero's texture */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+        }}
+      />
+      <div className="relative mx-auto grid w-full max-w-6xl flex-1 items-center gap-12 px-6 pt-28 lg:grid-cols-[3fr_2fr]">
         <h2 className="font-heading text-5xl font-semibold leading-tight sm:text-6xl lg:text-7xl">
           {headline.pre} <span className="text-accent-bright">{headline.highlight}</span> {headline.post}
         </h2>
@@ -24,7 +34,7 @@ export function Footer() {
         </ul>
       </div>
 
-      <div className="mx-auto w-full max-w-6xl px-6 pb-10">
+      <div className="relative mx-auto w-full max-w-6xl px-6 pb-10">
         <div className="grid gap-8 text-sm text-white/70 sm:grid-cols-3">
           <div>
             <p className="text-white">Email</p>
