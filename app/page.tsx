@@ -7,9 +7,7 @@ import { TextMarquee } from "@/components/sections/TextMarquee";
 import { StatsQuote } from "@/components/sections/StatsQuote";
 import { Awards } from "@/components/sections/Awards";
 import { WhyUs } from "@/components/sections/WhyUs";
-import { Pricing } from "@/components/sections/Pricing";
 import { Blog } from "@/components/sections/Blog";
-import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export default function Home() {
@@ -24,9 +22,7 @@ export default function Home() {
       <StatsQuote />
       <Awards />
       <WhyUs />
-      <Pricing />
       <Blog />
-      <Faq />
       <FinalCta />
     </main>
   );

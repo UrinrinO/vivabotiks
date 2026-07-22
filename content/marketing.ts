@@ -3,15 +3,6 @@ export type CaseStudy = { tag: string; title: string; result: string; image: str
 export type FounderQuote = { quote: string; name: string; role: string };
 export type Award = { number: string; title: string; issuer: string; year: string };
 export type WhyItem = { number: string; title: string; description: string };
-export type PricingTier = {
-  name: string;
-  monthly: number;
-  annual: number;
-  blurb: string;
-  features: string[];
-  popular?: boolean;
-  cta: { label: string; href: string };
-};
 export type Post = { date: string; category: string; title: string; excerpt: string; image: string };
 export type Intro = { eyebrow?: string; title: string; description?: string };
 
@@ -91,41 +82,6 @@ export const whyUs: WhyItem[] = [
   { number: "04", title: "Clear communication", description: "Plain-language updates and a plan you can actually follow." },
   { number: "05", title: "Built to last", description: "Well-tested, documented codebases you or we can maintain for years." },
   { number: "06", title: "Outcome focused", description: "We measure success by what your business can do after we ship." },
-];
-
-export const pricingIntro: Intro = {
-  eyebrow: "Engagements",
-  title: "Ways to work with us",
-  description: "Indicative engagement tiers. Final scope and pricing are shaped in a free discovery call.",
-};
-
-// PLACEHOLDER pricing — indicative only; confirm real numbers/features before launch.
-export const pricing: PricingTier[] = [
-  {
-    name: "Starter",
-    monthly: 1500,
-    annual: 1200,
-    blurb: "A focused build or automation to prove value fast.",
-    features: ["One clear objective", "Senior engineer + designer", "2–4 week delivery", "Post-launch handover"],
-    cta: { label: "Start here", href: "/contact" },
-  },
-  {
-    name: "Growth",
-    monthly: 3500,
-    annual: 2800,
-    blurb: "A full product or platform, built end to end.",
-    features: ["Dedicated delivery team", "AI & automation included", "Ongoing iteration", "Analytics & dashboards", "Priority support"],
-    popular: true,
-    cta: { label: "Book a call", href: "/contact" },
-  },
-  {
-    name: "Pro",
-    monthly: 6000,
-    annual: 4800,
-    blurb: "An ongoing partnership for ambitious roadmaps.",
-    features: ["Multi-team delivery", "Dedicated architect", "Roadmap planning", "SLA & maintenance", "Quarterly strategy reviews"],
-    cta: { label: "Talk to us", href: "/contact" },
-  },
 ];
 
 export const blogIntro: Intro = {

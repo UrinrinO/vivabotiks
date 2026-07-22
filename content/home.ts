@@ -2,7 +2,6 @@ export type Service = { number: string; title: string; description: string; href
 export type Stat = { value: number; suffix: string; label: string };
 export type ProcessStep = { number: string; title: string; description: string };
 export type Testimonial = { quote: string; name: string; role: string; company: string };
-export type Faq = { question: string; answer: string };
 
 export const hero = {
   headline: "AI-powered software for ambitious businesses",
@@ -148,39 +147,6 @@ export const testimonials: Testimonial[] = [
     name: "Client Name",
     role: "Product Manager",
     company: "Company Three",
-  },
-];
-
-export const faqIntro = {
-  eyebrow: "FAQ",
-  title: "Questions, answered",
-};
-
-export const faqs: Faq[] = [
-  {
-    question: "What kinds of businesses do you work with?",
-    answer:
-      "Startups, SMEs, and enterprises across Africa and beyond. If you have a process to automate, a product to build, or data to understand, we can help.",
-  },
-  {
-    question: "How does an engagement start?",
-    answer:
-      "With a free discovery call. We scope your goals, propose an approach and timeline, and assemble a dedicated team once you're ready.",
-  },
-  {
-    question: "Do you build custom AI solutions or integrate existing tools?",
-    answer:
-      "Both. We build custom models and assistants where they add real value, and integrate proven platforms where they get you results faster.",
-  },
-  {
-    question: "How long does a typical project take?",
-    answer:
-      "Small automations can ship in weeks; full products typically take a few months. You'll get a clear timeline during planning and progress updates throughout.",
-  },
-  {
-    question: "Do you offer support after launch?",
-    answer:
-      "Yes. Every project can include a maintenance plan covering monitoring, security updates, and continuous improvement.",
   },
 ];
 
