@@ -15,8 +15,8 @@ export function Footer() {
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)",
-          backgroundSize: "56px 56px",
+            "linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px)",
+          backgroundSize: "36px 36px",
         }}
       />
       <div className="relative mx-auto grid w-full max-w-6xl flex-1 items-center gap-12 px-6 pt-28 lg:grid-cols-[3fr_2fr]">
