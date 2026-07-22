@@ -21,7 +21,8 @@ export function Services() {
   const next = () => setPage((p) => (p + 1) % pageCount);
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24">
+    <section className="bg-ice">
+      <div className="mx-auto max-w-6xl px-6 py-24">
       <Reveal>
         <div className="flex items-end justify-between gap-6">
           <SectionHeading
@@ -90,6 +91,7 @@ export function Services() {
           ))}
         </motion.div>
       </AnimatePresence>
+      </div>
     </section>
   );
 }
