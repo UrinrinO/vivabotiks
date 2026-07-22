@@ -50,10 +50,10 @@ export function RevealImage({
       </motion.div>
       {!reduce && (
         <>
-          {/* Pale wash settling into full colour */}
+          {/* Warm pale wash settling into full colour */}
           <motion.div
             aria-hidden
-            className="absolute inset-0 bg-white"
+            className="absolute inset-0 bg-accent-tint"
             initial={{ opacity: 0.7 }}
             whileInView={{ opacity: 0 }}
             viewport={{ once: true, margin: "-60px" }}

@@ -26,7 +26,13 @@ export function WhyUs() {
         <Reveal scale>
           <ul>
             {whyUs.map((item, i) => (
-              <li key={item.number} className="border-b border-border first:border-t">
+              <li
+                key={item.number}
+                className={cn(
+                  "border-b first:border-t",
+                  i === active ? "border-accent-bright" : "border-border",
+                )}
+              >
                 <button
                   type="button"
                   onMouseEnter={() => setActive(i)}

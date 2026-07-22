@@ -39,7 +39,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-20 mx-auto flex h-full max-w-6xl flex-col justify-center px-6 pt-24 pb-36">
         <div className="max-w-2xl">
-          <span className="inline-flex items-center bg-gradient-to-r from-[#3b5bdb] to-[#5a7bff] px-4 py-2 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-white">
+          <span className="inline-flex items-center bg-gradient-to-r from-accent-bright to-accent-light px-4 py-2 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-ink">
             {hero.badge}
           </span>
           <h1 className="relative z-20 mt-7 max-w-none text-balance font-heading text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:w-[58rem] lg:text-[4.5rem]">

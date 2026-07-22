@@ -24,7 +24,7 @@ export function AboutBlock() {
             />
             {/* Dark stat panel overlapping the photo's lower-right */}
             <div className="absolute -bottom-8 right-0 w-[72%] max-w-sm bg-ink p-8 text-white sm:w-[60%]">
-              <p className="font-heading text-5xl font-bold">
+              <p className="font-heading text-5xl font-bold text-accent-bright">
                 <AnimatedCounter value={highlight.value} suffix={highlight.suffix} />
               </p>
               <p className="mt-4 font-semibold">{highlight.label}</p>

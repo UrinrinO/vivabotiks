@@ -25,7 +25,7 @@ export function StatsQuote() {
           <div className="grid grid-cols-2 gap-8">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <p className="font-heading text-4xl font-bold text-white sm:text-5xl">
+                <p className="font-heading text-4xl font-bold text-accent-bright sm:text-5xl">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </p>
                 <p className="mt-2 text-sm text-white/60">{stat.label}</p>
