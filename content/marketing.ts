@@ -12,7 +12,7 @@ export type PricingTier = {
   popular?: boolean;
   cta: { label: string; href: string };
 };
-export type Post = { date: string; category: string; title: string; excerpt: string };
+export type Post = { date: string; category: string; title: string; excerpt: string; image: string };
 export type Intro = { eyebrow?: string; title: string; description?: string };
 
 export const logosIntro: Intro = {
@@ -127,27 +127,34 @@ export const pricing: PricingTier[] = [
 
 export const blogIntro: Intro = {
   eyebrow: "Insights",
-  title: "From the Vivabotiks team",
+  title: "Articles From Our Team",
 };
 
-// PLACEHOLDER posts — replace with real articles before launch.
+// Titles, excerpts, and dates are the real articles from the previous site.
+// `category` labels are invented — the old site had no post categories. PLACEHOLDER
 export const posts: Post[] = [
   {
-    date: "Coming soon",
-    category: "AI",
-    title: "Where AI actually pays off for small teams",
-    excerpt: "A practical look at the automations worth building first.",
+    date: "2024-02-23",
+    category: "Security", // PLACEHOLDER
+    title: "Cloud computing & Cybersecurity",
+    excerpt:
+      "As more and more businesses move to the cloud, it's important to understand the potential cybersecurity threats that come with this transition...",
+    image: "/article.jpg",
   },
   {
-    date: "Coming soon",
-    category: "Engineering",
-    title: "Shipping software that survives its second year",
-    excerpt: "How we design codebases for long-term maintenance.",
+    date: "2020-01-21",
+    category: "Engineering", // PLACEHOLDER
+    title: "Web development in Nigeria",
+    excerpt:
+      "In today's competitive business environment, it is important to hire the right web developers. The quality of the web developers...",
+    image: "/svc-software.jpg",
   },
   {
-    date: "Coming soon",
-    category: "Design",
-    title: "Designing dashboards people actually use",
-    excerpt: "Turning raw data into decisions, not just charts.",
+    date: "2022-05-19",
+    category: "Business", // PLACEHOLDER
+    title: "Business and Innovation",
+    excerpt:
+      "The benefits of software engineering are many and varied. Perhaps the most significant benefit is that it can help businesses achieve their goals...",
+    image: "/svc-ai.jpg",
   },
 ];

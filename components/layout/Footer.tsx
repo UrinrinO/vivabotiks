@@ -51,7 +51,13 @@ export function Footer() {
                 {footerContent.contact.email}
               </a>
             </li>
+            <li>
+              <a href={`mailto:${footerContent.contact.email2}`} className="transition-colors hover:text-accent">
+                {footerContent.contact.email2}
+              </a>
+            </li>
             <li>{footerContent.contact.phone}</li>
+            <li>{footerContent.contact.phone2}</li>
             <li>{footerContent.contact.location}</li>
           </ul>
         </div>

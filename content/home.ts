@@ -61,11 +61,12 @@ export const services: Service[] = [
 
 export const about = {
   eyebrow: "Who we are",
-  headline: "An engineering team that ships ideas into the real world",
+  headline: "Leading Software Engineering Company",
   paragraphs: [
-    "Vivabotiks is a team of software engineers, designers, and data specialists with years of experience building technology that makes a difference. Today we bring AI into everything we deliver — so the products we build don't just work, they work smarter.",
-    "From first idea to launch and beyond, we partner closely with our clients at every step, and we believe the results should speak for themselves.",
+    "We are a team of software developers with vast experience in creating technology solutions for our clients. We have a passion for developing software that makes a difference in the world, and we are dedicated to helping our clients achieve their goals.",
+    "Our team has a wide range of skills and experience, and we are always looking for new challenges. We are committed to providing the best possible service to our clients, and we believe that our work should speak for itself.",
   ],
+  motif: ["Idea", "Think", "Create"],
   checks: [
     "Experienced, senior-led team",
     "End-to-end delivery, from idea to launch",

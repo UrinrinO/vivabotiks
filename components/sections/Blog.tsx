@@ -1,8 +1,8 @@
+import Image from "next/image";
 import { blogIntro, posts } from "@/content/marketing";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Tag } from "@/components/ui/Tag";
-import { CardVisual } from "@/components/ui/CardVisual";
 
 export function Blog() {
   return (
@@ -15,7 +15,15 @@ export function Blog() {
           {posts.map((post, i) => (
             <Reveal key={post.title} delay={i * 0.08}>
               <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-bg transition-all duration-300 hover:-translate-y-1 hover:shadow-sm">
-                <CardVisual seed={i + 1} className="h-40 w-full rounded-none border-0" />
+                <div className="relative h-40 w-full overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
                 <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-center gap-3">
                     <Tag>{post.category}</Tag>

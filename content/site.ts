@@ -18,6 +18,9 @@ export const navLinks: NavLink[] = [
 
 export const navCta = { label: "Start your project", href: "/contact" };
 
+// Google Form the contact page links out to (from the previous site).
+export const contactFormUrl = "https://forms.gle/i1QK6pVN63NJCPF87";
+
 export const footerContent = {
   blurb:
     "Vivabotiks is an AI-powered software company. We design, build, and maintain intelligent products for businesses across Africa and beyond.",
@@ -29,7 +32,9 @@ export const footerContent = {
   ],
   contact: {
     email: "info@vivabotiks.com",
+    email2: "contact@vivabotiks.com",
     phone: "+234 803 050 1670",
+    phone2: "+234 916 546 8417",
     location: "Polystar building, Maruwa bus stop, Lekki",
   },
   hours: "Mon–Fri, 9am–6pm WAT", // PLACEHOLDER — confirm real hours

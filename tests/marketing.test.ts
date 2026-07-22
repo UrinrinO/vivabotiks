@@ -10,6 +10,17 @@ describe("marketing content", () => {
     expect(pricing).toHaveLength(3);
     expect(posts).toHaveLength(3);
   });
+  it("each post has a real title, date, and image asset", () => {
+    expect(posts.map((p) => p.title)).toEqual([
+      "Cloud computing & Cybersecurity",
+      "Web development in Nigeria",
+      "Business and Innovation",
+    ]);
+    for (const p of posts) {
+      expect(p.date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(p.image).toMatch(/^\/.+\.(jpg|jpeg|png|webp)$/);
+    }
+  });
   it("has exactly one popular pricing tier with monthly and annual prices", () => {
     expect(pricing.filter((t) => t.popular)).toHaveLength(1);
     for (const t of pricing) {
