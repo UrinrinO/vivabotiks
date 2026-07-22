@@ -6,7 +6,7 @@ import { siteMeta } from "@/content/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#04060c] text-white">
+    <section className="relative overflow-hidden bg-[#04131E] text-white">
       {/* Full-bleed robot backdrop, blended into the dark — no card, no border */}
       <div aria-hidden className="absolute inset-y-0 right-0 hidden w-[72%] md:block">
         <Image
@@ -18,8 +18,8 @@ export function Hero() {
           className="object-cover object-[68%_22%]"
         />
         {/* Melt the photo's edges into the section background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#04060c] via-[#04060c]/30 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#04060c] via-transparent to-[#04060c]/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#04131E] via-[#04131E]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#04131E] via-transparent to-[#04131E]/25" />
       </div>
 
       {/* Diagonal blue light beam from the lower-left, like home-two */}
@@ -43,7 +43,7 @@ export function Hero() {
           <span className="inline-flex items-center bg-gradient-to-r from-[#3b5bdb] to-[#5a7bff] px-4 py-2 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-white">
             ^Software, reimagined with AI^
           </span>
-          <h1 className="mt-7 font-heading text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[4.5rem]">
+          <h1 className="relative z-20 mt-7 max-w-none text-balance font-heading text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:w-[58rem] lg:text-[4.5rem]">
             {hero.headline}
           </h1>
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/65">{hero.subline}</p>

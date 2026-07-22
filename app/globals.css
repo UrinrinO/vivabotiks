@@ -2,15 +2,15 @@
 
 @theme {
   --color-bg: #ffffff;
-  --color-surface: #f5f9fc;
-  --color-surface-2: #eef4f9;
+  --color-surface: #f2f4f3;
+  --color-surface-2: #e3e5e2;
   --color-ink: #011627;
-  --color-ink-soft: #4f6373;
-  --color-accent: #0e7490;
-  --color-accent-bright: #22d3ee;
+  --color-ink-soft: #2f4054;
+  --color-accent: #8a5c00;
+  --color-accent-bright: #e19f20;
   --color-border: rgb(1 22 39 / 0.10);
-  --font-heading: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, sans-serif;
-  --font-body: var(--font-inter), ui-sans-serif, sans-serif;
+  --font-heading: var(--font-encode-sans), ui-sans-serif, sans-serif;
+  --font-body: var(--font-encode-sans), ui-sans-serif, sans-serif;
 }
 
 html {

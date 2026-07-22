@@ -11,7 +11,7 @@ export function StatsQuote() {
     .slice(0, 2)
     .join("");
   return (
-    <section className="relative overflow-hidden bg-[#04060c] text-white">
+    <section className="relative overflow-hidden bg-[#04131E] text-white">
       <div
         aria-hidden
         className="pointer-events-none absolute right-[-8rem] top-0 size-[32rem] rounded-full bg-[#2f56ff]/20 blur-[120px]"
@@ -37,7 +37,7 @@ export function StatsQuote() {
             <figcaption className="mt-6 flex items-center gap-4">
               <span
                 aria-hidden
-                className="flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-bright font-heading text-sm font-bold text-[#04060c]"
+                className="flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-bright font-heading text-sm font-bold text-[#04131E]"
               >
                 {initials}
               </span>
