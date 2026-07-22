@@ -56,6 +56,14 @@ export const aboutPage = {
         title: "Free consultation",
         description: "Contact us today to discuss your next software project.",
       },
+      {
+        title: "Plain-spoken partnership",
+        description: "No jargon and no surprises. You always know what we are building, why, and how far along it is.",
+      },
+      {
+        title: "Support beyond launch",
+        description: "We stay on after go-live, with monitoring, maintenance, and steady improvements.",
+      },
     ] satisfies TeamCallout[],
   },
 
