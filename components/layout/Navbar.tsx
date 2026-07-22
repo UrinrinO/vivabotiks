@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { navCta, navLinks } from "@/content/site";
 import { cn } from "@/lib/cn";
 import { Logo } from "@/components/layout/Logo";
@@ -51,12 +51,11 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "inline-flex items-center gap-1 font-heading text-sm font-medium transition-colors",
+                "font-heading text-sm font-medium transition-colors",
                 overHero ? "text-white/80 hover:text-white" : "text-ink-soft hover:text-ink",
               )}
             >
               {link.label}
-              <ChevronDown aria-hidden className="size-3.5 opacity-60" />
             </Link>
           ))}
         </nav>
