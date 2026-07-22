@@ -46,7 +46,9 @@ export function FinalCta() {
 
         {/* Flat glass widget holding the call to action */}
         <div className="mx-auto mt-10 flex max-w-md flex-col items-center gap-6 border border-white/10 bg-white/[0.07] p-8 backdrop-blur-md">
-          <Button href={finalCta.cta.href}>{finalCta.cta.label}</Button>
+          <Button href={finalCta.cta.href} className="bg-white text-ink hover:bg-white/90">
+            {finalCta.cta.label}
+          </Button>
         </div>
       </Reveal>
     </section>

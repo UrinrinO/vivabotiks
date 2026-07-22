@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { navLinks, navCta, footerContent, siteMeta, contactFormUrl } from "@/content/site";
-import { hero, services, about, stats, processSteps, testimonials, finalCta } from "@/content/home";
+import { services, about, stats, processSteps, testimonials, finalCta } from "@/content/home";
 
 describe("content shape", () => {
   it("has the five nav links and a CTA", () => {
