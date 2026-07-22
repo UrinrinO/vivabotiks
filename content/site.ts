@@ -13,10 +13,9 @@ export const navLinks: NavLink[] = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Articles", href: "/articles" },
-  { label: "Contact", href: "/contact" },
 ];
 
-export const navCta = { label: "Start your project", href: "/contact" };
+export const navCta = { label: "Get in touch", href: "/contact" };
 
 // Google Form the contact page links out to (from the previous site).
 export const contactFormUrl = "https://forms.gle/i1QK6pVN63NJCPF87";

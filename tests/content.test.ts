@@ -3,8 +3,9 @@ import { navLinks, navCta, footerContent, siteMeta, contactFormUrl } from "@/con
 import { services, about, stats, finalCta } from "@/content/home";
 
 describe("content shape", () => {
-  it("has the five nav links and a CTA", () => {
-    expect(navLinks.map((l) => l.label)).toEqual(["Home", "About", "Services", "Articles", "Contact"]);
+  it("has the four nav links and a contact CTA", () => {
+    expect(navLinks.map((l) => l.label)).toEqual(["Home", "About", "Services", "Articles"]);
+    expect(navCta.label).toBe("Get in touch");
     expect(navCta.href).toBe("/contact");
   });
   it("home content matches the spec counts", () => {

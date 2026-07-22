@@ -1,10 +1,12 @@
 import type { MetadataRoute } from "next";
-import { navLinks, siteMeta } from "@/content/site";
+import { navCta, navLinks, siteMeta } from "@/content/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return navLinks.map((link) => ({
-    url: `${siteMeta.url}${link.href === "/" ? "" : link.href}`,
+  // The contact page lives behind the CTA rather than the nav, so include it explicitly.
+  const hrefs = [...new Set([...navLinks.map((l) => l.href), navCta.href])];
+  return hrefs.map((href) => ({
+    url: `${siteMeta.url}${href === "/" ? "" : href}`,
     changeFrequency: "monthly",
-    priority: link.href === "/" ? 1 : 0.7,
+    priority: href === "/" ? 1 : 0.7,
   }));
 }
