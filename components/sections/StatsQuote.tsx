@@ -10,35 +10,39 @@ export function StatsQuote() {
     .slice(0, 2)
     .join("");
   return (
-    <section className="border-y border-border bg-surface">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center">
+    <section className="relative overflow-hidden bg-[#05070d] text-white">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute right-[-8rem] top-0 size-[32rem] rounded-full bg-[#2f56ff]/20 blur-[120px]"
+      />
+      <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center">
         <Reveal>
           <div className="grid grid-cols-2 gap-8">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <p className="font-heading text-4xl font-bold text-ink sm:text-5xl">
+                <p className="font-heading text-4xl font-bold text-white sm:text-5xl">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </p>
-                <p className="mt-2 text-sm text-ink-soft">{stat.label}</p>
+                <p className="mt-2 text-sm text-white/60">{stat.label}</p>
               </div>
             ))}
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <figure className="rounded-3xl border border-border bg-bg p-8 shadow-sm">
-            <blockquote className="font-heading text-xl font-medium leading-snug text-ink sm:text-2xl">
+          <figure className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur">
+            <blockquote className="font-heading text-xl font-medium leading-snug text-white sm:text-2xl">
               “{founderQuote.quote}”
             </blockquote>
             <figcaption className="mt-6 flex items-center gap-4">
               <span
                 aria-hidden
-                className="flex size-12 items-center justify-center rounded-full bg-ink font-heading text-sm font-bold text-white"
+                className="flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-bright font-heading text-sm font-bold text-[#05070d]"
               >
                 {initials}
               </span>
               <span className="text-sm">
-                <span className="block font-semibold text-ink">{founderQuote.name}</span>
-                <span className="block text-ink-soft">{founderQuote.role}</span>
+                <span className="block font-semibold text-white">{founderQuote.name}</span>
+                <span className="block text-white/60">{founderQuote.role}</span>
               </span>
             </figcaption>
           </figure>

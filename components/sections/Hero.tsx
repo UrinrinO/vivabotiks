@@ -1,49 +1,89 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Star } from "lucide-react";
 import { hero } from "@/content/home";
-import { Button } from "@/components/ui/Button";
-import { Tag } from "@/components/ui/Tag";
+import { siteMeta } from "@/content/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-surface to-bg pt-32 pb-20">
+    <section className="relative overflow-hidden bg-[#04060c] text-white">
+      {/* Full-bleed robot backdrop, blended into the dark — no card, no border */}
+      <div aria-hidden className="absolute inset-y-0 right-0 hidden w-[72%] md:block">
+        <Image
+          src="/hero-robot.jpg"
+          alt=""
+          fill
+          priority
+          sizes="72vw"
+          className="object-cover object-[68%_22%]"
+        />
+        {/* Melt the photo's edges into the section background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#04060c] via-[#04060c]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#04060c] via-transparent to-[#04060c]/25" />
+      </div>
+
+      {/* Diagonal blue light beam from the lower-left, like home-two */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-24 right-[-10%] size-[34rem] rounded-full bg-accent-bright/15 blur-3xl [animation:glow-drift_16s_ease-in-out_infinite]"
+        className="pointer-events-none absolute -left-[15%] top-[-15%] h-[140%] w-[85%] rotate-[16deg]"
+        style={{
+          background:
+            "linear-gradient(105deg, rgba(47,86,255,0) 18%, rgba(90,125,255,0.38) 46%, rgba(47,86,255,0) 74%)",
+          filter: "blur(70px)",
+        }}
       />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[3fr_2fr]">
-        <div>
-          <Tag>AI-powered software company</Tag>
-          <h1 className="mt-5 font-heading text-4xl font-semibold leading-[1.1] text-ink sm:text-5xl lg:text-6xl">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-40 top-1/4 size-[38rem] rounded-full bg-[#2f56ff]/25 blur-[130px]"
+      />
+
+      {/* Content */}
+      <div className="relative z-20 mx-auto flex min-h-svh max-w-6xl flex-col justify-center px-6 pt-28 pb-60">
+        <div className="max-w-2xl">
+          <span className="inline-flex items-center rounded-lg bg-gradient-to-r from-[#3b5bdb] to-[#5a7bff] px-4 py-2 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-white">
+            ^Software, reimagined with AI^
+          </span>
+          <h1 className="mt-7 font-heading text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[4.5rem]">
             {hero.headline}
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">{hero.subline}</p>
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/65">{hero.subline}</p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href={hero.primaryCta.href} star>
+            <Link
+              href={hero.primaryCta.href}
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-heading text-sm font-medium text-ink transition-transform duration-300 hover:-translate-y-0.5"
+            >
+              <Star aria-hidden className="size-4 fill-accent text-accent" />
               {hero.primaryCta.label}
-            </Button>
-            <Button href={hero.secondaryCta.href} variant="ghost">
+            </Link>
+            <Link
+              href={hero.secondaryCta.href}
+              className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 font-heading text-sm font-medium text-white transition-colors duration-300 hover:border-accent-bright hover:text-accent-bright"
+            >
               {hero.secondaryCta.label}
-            </Button>
-          </div>
-        </div>
-
-        {/* Abstract dashboard mock — pure CSS, no imagery */}
-        <div aria-hidden className="relative mx-auto hidden h-80 w-full max-w-sm lg:block">
-          <div className="absolute inset-0 rounded-3xl border border-border bg-surface shadow-sm" />
-          <div className="absolute left-6 top-6 right-6 flex items-center gap-2">
-            <span className="size-3 rounded-full bg-accent-bright" />
-            <span className="size-3 rounded-full bg-ink/15" />
-            <span className="size-3 rounded-full bg-ink/15" />
-          </div>
-          <div className="absolute left-6 right-6 top-16 h-24 rounded-2xl bg-gradient-to-tr from-accent/20 via-surface-2 to-bg" />
-          <div className="absolute left-6 top-44 h-3 w-40 rounded-full bg-ink/10" />
-          <div className="absolute left-6 top-52 h-3 w-28 rounded-full bg-ink/10" />
-          <div className="absolute bottom-6 left-6 right-6 flex gap-3">
-            <div className="h-16 flex-1 rounded-xl bg-surface-2" />
-            <div className="h-16 flex-1 rounded-xl bg-accent/15" />
-            <div className="h-16 flex-1 rounded-xl bg-surface-2" />
+            </Link>
           </div>
         </div>
       </div>
+
+      {/* Floating glass card over the image, like the reference overlay */}
+      <div className="absolute bottom-48 right-10 z-20 hidden w-60 rounded-2xl border border-white/10 bg-white/[0.07] p-4 backdrop-blur-md lg:block">
+        <p className="font-heading text-xs font-medium uppercase tracking-widest text-white/50">
+          ^Project preview^
+        </p>
+        <div className="mt-3 h-2 w-full rounded-full bg-white/10" />
+        <div className="mt-2 h-2 w-2/3 rounded-full bg-white/10" />
+        <div className="mt-4 rounded-full bg-white py-2 text-center font-heading text-xs font-medium text-ink">
+          {hero.primaryCta.label}
+        </div>
+      </div>
+
+      {/* Oversized bright watermark, clipped at the bottom edge like home-two */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-[-0.22em] z-10 select-none whitespace-nowrap text-center font-heading text-[20vw] font-bold leading-none text-white/95"
+      >
+        {siteMeta.name}
+      </span>
     </section>
   );
 }

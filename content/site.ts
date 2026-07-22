@@ -27,13 +27,12 @@ export const footerContent = {
     "Data Analytics",
     "3D Design & Animation",
   ],
-  // PLACEHOLDER contact details — replace with real ones before launch
   contact: {
-    email: "hello@vivabotiks.com",
-    phone: "+234 000 000 0000",
-    location: "Lagos, Nigeria",
+    email: "info@vivabotiks.com",
+    phone: "+234 803 050 1670",
+    location: "Polystar building, Maruwa bus stop, Lekki",
   },
-  hours: "Mon–Fri, 9am–6pm WAT", // PLACEHOLDER
+  hours: "Mon–Fri, 9am–6pm WAT", // PLACEHOLDER — confirm real hours
   // PLACEHOLDER socials — replace hrefs with real profiles before launch
   socials: [
     { label: "X", href: "#" },

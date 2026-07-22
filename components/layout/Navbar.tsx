@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
-import { Menu, Star, X } from "lucide-react";
-import { navCta, navLinks, siteMeta } from "@/content/site";
+import { ChevronDown, Menu, Star, X } from "lucide-react";
+import { navCta, navLinks } from "@/content/site";
 import { cn } from "@/lib/cn";
+import { Logo } from "@/components/layout/Logo";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,26 +26,37 @@ export function Navbar() {
     };
   }, [open]);
 
+  // At the top of the home page the bar floats over the dark hero (light-on-dark);
+  // once scrolled it becomes a solid light bar (dark-on-light).
+  const overHero = !scrolled;
+
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        scrolled ? "border-b border-border bg-bg/90 backdrop-blur" : "bg-transparent",
+        overHero ? "bg-transparent" : "border-b border-border bg-bg/90 backdrop-blur",
       )}
     >
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="font-heading text-xl font-bold tracking-tight text-ink">
-          {siteMeta.name}
+        <Link href="/" aria-label="Vivabotiks home">
+          <Logo onDark={overHero} />
         </Link>
 
-        <nav aria-label="Main" className="hidden items-center gap-8 lg:flex">
+        <nav
+          aria-label="Main"
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 lg:flex"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="font-heading text-sm font-medium text-ink-soft transition-colors hover:text-accent"
+              className={cn(
+                "inline-flex items-center gap-1 font-heading text-sm font-medium transition-colors",
+                overHero ? "text-white/80 hover:text-white" : "text-ink-soft hover:text-ink",
+              )}
             >
               {link.label}
+              <ChevronDown aria-hidden className="size-3.5 opacity-60" />
             </Link>
           ))}
         </nav>
@@ -52,16 +64,22 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href={navCta.href}
-            className="hidden items-center gap-2 rounded-full bg-ink px-5 py-2.5 font-heading text-sm font-medium text-white transition-colors hover:bg-ink/90 sm:inline-flex"
+            className={cn(
+              "hidden items-center gap-2 rounded-full px-5 py-2.5 font-heading text-sm font-medium transition-colors sm:inline-flex",
+              overHero ? "bg-white text-ink hover:bg-white/90" : "bg-ink text-white hover:bg-ink/90",
+            )}
           >
-            <Star aria-hidden className="size-4 fill-accent-bright text-accent-bright" />
+            <Star aria-hidden className="size-4 fill-accent text-accent" />
             {navCta.label}
           </Link>
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((o) => !o)}
-            className="rounded-full border border-border p-2.5 text-ink lg:hidden"
+            className={cn(
+              "rounded-full border p-2.5 lg:hidden",
+              overHero ? "border-white/30 text-white" : "border-border text-ink",
+            )}
           >
             {open ? <X aria-hidden className="size-5" /> : <Menu aria-hidden className="size-5" />}
           </button>

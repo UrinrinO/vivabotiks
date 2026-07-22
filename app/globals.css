@@ -9,7 +9,7 @@
   --color-accent: #0e7490;
   --color-accent-bright: #22d3ee;
   --color-border: rgb(1 22 39 / 0.10);
-  --font-heading: var(--font-fraunces), Georgia, serif;
+  --font-heading: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, sans-serif;
   --font-body: var(--font-inter), ui-sans-serif, sans-serif;
 }
 
