@@ -36,3 +36,10 @@ export const stubPages: Record<"about" | "services" | "articles" | "contact", St
 };
 
 export const stubBackHome = { label: "Back to home", href: "/" };
+
+export const contactActions = {
+  // PLACEHOLDER — review wording
+  formLabel: "Open the project form",
+  // PLACEHOLDER — review wording
+  emailLead: "Prefer email? Write to us at",
+};
