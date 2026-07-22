@@ -11,7 +11,6 @@ export const logosIntro: Intro = {
 
 // Wordmarks for now — partner logo files to be added later.
 export const partners: Partner[] = [
-  { name: "USW" },
   { name: "OTID" },
   { name: "TKays AgroCosmetics" },
   { name: "AfroWales" },

@@ -3,7 +3,7 @@ import { partners, caseStudies, founderQuote, whyUs, posts } from "@/content/mar
 
 describe("marketing content", () => {
   it("has the expected counts", () => {
-    expect(partners).toHaveLength(10);
+    expect(partners).toHaveLength(9);
     expect(caseStudies).toHaveLength(3);
     expect(whyUs).toHaveLength(6);
     expect(posts).toHaveLength(3);

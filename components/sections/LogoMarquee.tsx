@@ -11,7 +11,7 @@ export function LogoMarquee() {
         {partners.map((p) => (
           <span
             key={p.name}
-            className="mx-10 whitespace-nowrap font-heading text-2xl font-semibold text-ink-soft/45"
+            className="mx-10 whitespace-nowrap font-heading text-2xl font-semibold text-ink-soft/45 transition-colors duration-300 hover:text-ink"
           >
             {p.name}
           </span>
