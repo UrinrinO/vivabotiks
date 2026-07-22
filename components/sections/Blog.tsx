@@ -1,6 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
 import { blogIntro, posts } from "@/content/marketing";
-import { PixelDissolve } from "@/components/ui/PixelDissolve";
 import { Reveal } from "@/components/ui/Reveal";
 import { RevealImage } from "@/components/ui/RevealImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -8,10 +7,7 @@ import { Tag } from "@/components/ui/Tag";
 
 export function Blog() {
   return (
-    <section>
-      {/* White why-us section above dissolves into this surface band */}
-      <PixelDissolve />
-      <div className="bg-surface">
+    <section className="border-y border-border bg-surface">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <Reveal>
           <SectionHeading eyebrow={blogIntro.eyebrow} title={blogIntro.title} />
@@ -43,7 +39,6 @@ export function Blog() {
             </Reveal>
           ))}
         </div>
-      </div>
       </div>
     </section>
   );
