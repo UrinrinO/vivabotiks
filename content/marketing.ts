@@ -1,4 +1,4 @@
-export type Partner = { name: string; initials: string };
+export type Partner = { name: string };
 export type CaseStudy = { tag: string; title: string; result: string; image: string };
 export type FounderQuote = { quote: string; name: string; role: string };
 export type WhyItem = { number: string; title: string; description: string; image: string };
@@ -9,14 +9,17 @@ export const logosIntro: Intro = {
   title: "Strong partnerships with Vivabotiks",
 };
 
-// PLACEHOLDER partners — replace with real client names/logos before launch.
+// Wordmarks for now — partner logo files to be added later.
 export const partners: Partner[] = [
-  { name: "Northwind", initials: "NW" },
-  { name: "Kola Foods", initials: "KF" },
-  { name: "Lumen Health", initials: "LH" },
-  { name: "Paystack-like", initials: "PS" },
-  { name: "Savanna Bank", initials: "SB" },
-  { name: "Orbit Logistics", initials: "OL" },
+  { name: "USW" },
+  { name: "OTID" },
+  { name: "TKays AgroCosmetics" },
+  { name: "AfroWales" },
+  { name: "Youth4Change" },
+  { name: "Cymrai" },
+  { name: "VhiNigeria" },
+  { name: "Tahci" },
+  { name: "OOA & Associates" },
 ];
 
 // Solutions drafted from the founder's genericized delivery history — review wording.
