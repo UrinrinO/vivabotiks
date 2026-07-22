@@ -9,14 +9,6 @@ export const hero = {
     "Vivabotiks designs and builds intelligent products — custom software, automation, data analytics, and 3D experiences — for African businesses and beyond.",
   primaryCta: { label: "Book a discovery call", href: "/contact" },
   secondaryCta: { label: "Our services", href: "/services" },
-  ticker: [
-    "AI Automation",
-    "Software Development",
-    "Data Analytics",
-    "3D Design & Animation",
-    "Machine Learning",
-    "Product Design",
-  ],
 };
 
 export const services: Service[] = [

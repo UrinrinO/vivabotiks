@@ -12,7 +12,6 @@ describe("content shape", () => {
     expect(stats).toHaveLength(4);
     expect(processSteps).toHaveLength(5);
     expect(testimonials).toHaveLength(3);
-    expect(hero.ticker.length).toBeGreaterThanOrEqual(4);
     expect(finalCta.cta.href).toBe("/contact");
     expect(about.checks).toHaveLength(3);
     expect(about.motif).toEqual(["Idea", "Think", "Create"]);

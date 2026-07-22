@@ -3,7 +3,6 @@ import { Services } from "@/components/sections/Services";
 import { AboutBlock } from "@/components/sections/AboutBlock";
 import { LogoMarquee } from "@/components/sections/LogoMarquee";
 import { CaseStudies } from "@/components/sections/CaseStudies";
-import { TextMarquee } from "@/components/sections/TextMarquee";
 import { StatsQuote } from "@/components/sections/StatsQuote";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Blog } from "@/components/sections/Blog";
@@ -17,7 +16,6 @@ export default function Home() {
       <AboutBlock />
       <LogoMarquee />
       <CaseStudies />
-      <TextMarquee />
       <StatsQuote />
       <WhyUs />
       <Blog />

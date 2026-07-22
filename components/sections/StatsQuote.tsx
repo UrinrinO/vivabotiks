@@ -11,7 +11,11 @@ export function StatsQuote() {
     .slice(0, 2)
     .join("");
   return (
-    <section className="relative overflow-hidden bg-[#04131E] text-white">
+    <section className="text-white">
+      {/* Top of the dark band: dark squares dissolve over the light section
+          above so the light->dark boundary reads as a fade, not a cut. */}
+      <PixelDissolve to="#04131E" />
+      <div className="relative overflow-hidden bg-[#04131E]">
       <div
         aria-hidden
         className="pointer-events-none absolute right-[-8rem] top-0 size-[32rem] rounded-full bg-[#2f56ff]/20 blur-[120px]"
@@ -52,6 +56,7 @@ export function StatsQuote() {
       {/* Bottom of the dark band: white squares dissolve in over the dark tail
           so the dark->light boundary into the section below reads as a fade. */}
       <PixelDissolve className="relative" from="transparent" to="var(--color-bg)" />
+      </div>
     </section>
   );
 }
