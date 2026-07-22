@@ -47,11 +47,11 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
-// PLACEHOLDER founder quote — replace with a real founder statement before launch.
+// Quote wording is PLACEHOLDER — replace with Uri's real statement before launch.
 export const founderQuote: FounderQuote = {
   quote:
     "We started Vivabotiks to make serious software feel within reach — pairing senior engineering with AI so smaller teams can ship like big ones.",
-  name: "Founder Name",
+  name: "Uri",
   role: "Founder & CEO, Vivabotiks",
 };
 

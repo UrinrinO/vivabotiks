@@ -10,40 +10,66 @@ type RevealImageProps = {
   sizes?: string;
   className?: string;
   priority?: boolean;
+  /** Colour of the plate that wipes away to reveal the image. */
+  plate?: string;
 };
 
-// A full-bleed image that scale-settles into place on scroll (1.12 -> 1). The
-// scroll-in settle lives on the motion wrapper; the hover zoom lives on the
-// <Image> itself so the two transforms compose instead of fighting. Under
-// prefers-reduced-motion it renders a static image.
-export function RevealImage({ src, alt = "", sizes, className, priority }: RevealImageProps) {
+// Reverse-engineered from the reference recording: each image starts as a
+// solid colour plate; the photo is revealed top-to-bottom as the plate wipes
+// away, and the photo settles from a pale wash into full colour just after.
+// The scroll-in scale settle lives on the inner wrapper and the hover zoom on
+// the <Image> itself so the transforms compose. Under prefers-reduced-motion
+// it renders the plain image.
+export function RevealImage({
+  src,
+  alt = "",
+  sizes,
+  className,
+  priority,
+  plate = "#1E38A6",
+}: RevealImageProps) {
   const reduce = useReducedMotion();
-
-  const image = (
-    <Image
-      src={src}
-      alt={alt}
-      fill
-      sizes={sizes}
-      priority={priority}
-      className="object-cover transition-transform duration-500 group-hover:scale-105"
-    />
-  );
 
   return (
     <div className={cn("relative overflow-hidden", className)}>
-      {reduce ? (
-        image
-      ) : (
-        <motion.div
-          className="absolute inset-0"
-          initial={{ opacity: 0, scale: 1.12 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-        >
-          {image}
-        </motion.div>
+      <motion.div
+        className="absolute inset-0"
+        initial={reduce ? false : { scale: 1.08 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 1.1, ease: "easeOut" }}
+      >
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes={sizes}
+          priority={priority}
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </motion.div>
+      {!reduce && (
+        <>
+          {/* Pale wash settling into full colour */}
+          <motion.div
+            aria-hidden
+            className="absolute inset-0 bg-white"
+            initial={{ opacity: 0.7 }}
+            whileInView={{ opacity: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
+          />
+          {/* Blue plate wiping away top-to-bottom */}
+          <motion.div
+            aria-hidden
+            className="absolute inset-0"
+            style={{ backgroundColor: plate }}
+            initial={{ clipPath: "inset(0% 0 0 0)" }}
+            whileInView={{ clipPath: "inset(100% 0 0 0)" }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.55, ease: [0.65, 0, 0.35, 1] }}
+          />
+        </>
       )}
     </div>
   );
