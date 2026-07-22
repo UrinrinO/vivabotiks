@@ -1,22 +1,20 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
-import { Button } from "@/components/ui/Button";
-import { stubBackHome, stubPages } from "@/content/pages";
+import { Blog } from "@/components/sections/Blog";
+import { FinalCta } from "@/components/sections/FinalCta";
+import { articlesPage } from "@/content/articles";
 
-const page = stubPages.articles;
-
-export const metadata: Metadata = { title: page.title, description: page.metaDescription };
+export const metadata: Metadata = {
+  title: articlesPage.metaTitle,
+  description: articlesPage.metaDescription,
+};
 
 export default function ArticlesPage() {
   return (
     <main>
-      <PageHero title={page.title} breadcrumb={page.breadcrumb} />
-      <div className="mx-auto max-w-6xl px-6 py-24">
-        <p className="max-w-xl text-lg leading-relaxed text-ink-soft">{page.message}</p>
-        <Button href={stubBackHome.href} variant="ghost" className="mt-10">
-          {stubBackHome.label}
-        </Button>
-      </div>
+      <PageHero title={articlesPage.title} breadcrumb={articlesPage.breadcrumb} />
+      <Blog />
+      <FinalCta />
     </main>
   );
 }
