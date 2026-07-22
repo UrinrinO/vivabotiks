@@ -5,14 +5,7 @@ export type StubPage = {
   metaDescription: string;
 };
 
-export const stubPages: Record<"services" | "articles" | "contact", StubPage> = {
-  services: {
-    title: "Our Services",
-    breadcrumb: "Services",
-    message:
-      "Detailed service pages are coming soon. Reach out and we'll walk you through what we can build together.",
-    metaDescription: "Vivabotiks services: AI & automation, software development, data analytics, 3D design.",
-  },
+export const stubPages: Record<"articles" | "contact", StubPage> = {
   articles: {
     title: "Articles",
     breadcrumb: "Articles",
