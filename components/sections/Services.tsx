@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { services, servicesIntro } from "@/content/home";
+import { PixelDissolve } from "@/components/ui/PixelDissolve";
 import { Reveal } from "@/components/ui/Reveal";
 import { RevealImage } from "@/components/ui/RevealImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -21,7 +22,10 @@ export function Services() {
   const next = () => setPage((p) => (p + 1) % pageCount);
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24">
+    <section>
+      {/* Dark hero above dissolves down into this light section */}
+      <PixelDissolve flip to="#04131E" />
+      <div className="mx-auto max-w-6xl px-6 pb-24 pt-12">
       <Reveal>
         <div className="flex items-end justify-between gap-6">
           <SectionHeading
@@ -90,6 +94,7 @@ export function Services() {
           ))}
         </motion.div>
       </AnimatePresence>
+      </div>
     </section>
   );
 }

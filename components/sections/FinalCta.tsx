@@ -1,11 +1,15 @@
 import Image from "next/image";
 import { finalCta } from "@/content/home";
 import { Button } from "@/components/ui/Button";
+import { PixelDissolve } from "@/components/ui/PixelDissolve";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden bg-[#04131E] text-white">
+    <section className="text-white">
+      {/* Surface blog band above dissolves into this dark closing band */}
+      <PixelDissolve from="var(--color-surface)" to="#04131E" />
+      <div className="relative overflow-hidden bg-[#04131E]">
       {/* Barely-there grid, echoing the hero and footer texture */}
       <div
         aria-hidden
@@ -51,6 +55,7 @@ export function FinalCta() {
           </Button>
         </div>
       </Reveal>
+      </div>
     </section>
   );
 }

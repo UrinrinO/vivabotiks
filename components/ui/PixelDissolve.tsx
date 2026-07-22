@@ -20,20 +20,24 @@ const delayFor = (row: number, col: number) => (((row * 31 + col * 17) % 13) / 1
 type PixelDissolveProps = {
   from?: string;
   to?: string;
+  /** Flip vertically: dense `to` cells at the TOP (for a dark section above a light one). */
+  flip?: boolean;
   className?: string;
 };
 
 export function PixelDissolve({
   from = "transparent",
   to = "var(--color-surface)",
+  flip = false,
   className,
 }: PixelDissolveProps) {
   const reduce = useReducedMotion();
+  const rows = flip ? [...PATTERN].reverse() : PATTERN;
 
   if (reduce) {
     return (
       <div aria-hidden className={cn("flex h-20 w-full flex-col", className)}>
-        {PATTERN.map((row, rowIndex) => (
+        {rows.map((row, rowIndex) => (
           <div key={rowIndex} className="flex w-full flex-1">
             {row.map((cell, cellIndex) => (
               <div
